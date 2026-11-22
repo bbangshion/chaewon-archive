@@ -1,0 +1,294 @@
+name: CHAEWON FILM - Publish All YouTube Matches
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'scan only, or publish all metadata-matched public videos'
+        required: true
+        default: publish_all
+        type: choice
+        options: [publish_all, scan]
+      pages_per_query:
+        description: '1 page per query (~450 initial results) or 2 (more API quota)'
+        required: true
+        default: '1'
+        type: choice
+        options: ['1', '2']
+permissions:
+  contents: write
+concurrency:
+  group: chaewon-film-youtube-sync
+  cancel-in-progress: false
+jobs:
+  publish-all:
+    if: github.repository == 'bbangshion/chaewon-archive' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out latest CHAEWON source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Find and publish all qualifying S21 YouTube results
+        shell: bash
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          MODE: ${{ inputs.mode }}
+          PAGES: ${{ inputs.pages_per_query }}
+        run: |
+          python - <<'PY'
+          #!/usr/bin/env python3
+          """Discover YouTube videos mentioning tripleS S21 Kim ChaeWon. Save a review catalogue,
+          and publish ALL public embeddable matches to the S21 FILM metadata catalogue. Does not download video files.
+          """
+          from __future__ import annotations
+          import datetime as dt
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import sys
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+          
+          API = 'https://www.googleapis.com/youtube/v3'
+          KEY = os.getenv('YOUTUBE_API_KEY','').strip()
+          MODE = os.getenv('MODE','publish_all').strip()
+          PAGES = int(os.getenv('PAGES','1'))
+          SELECTED = [i.strip() for i in os.getenv('SELECTED_IDS','').split(',') if i.strip()]
+          REPORT = Path('reports/chaewon-youtube-review.json')
+          FILMS = Path('public/data/films.json')
+          SEARCHES = [
+              'tripleS 김채원 직캠',
+              '트리플에스 채원이 직캠',
+              'tripleS Chaewon fancam',
+              '#트리플에스 #채원',
+              '#트리플에스 #채원이',
+              'tripleS 김채원 무대',
+              'tripleS 김채원 공식 영상',
+              'tripleS 채원 SIGNAL',
+              'tripleS Chaewon stage',
+          ]
+          MEMBER = re.compile(r'김\s*채원|채원이|(?<![a-z])cha[e]?\s*won(?![a-z])|(?<![a-z])kim\s*chae\s*won(?![a-z])|チェウォン|(?<![a-z\d])s21(?!\d)',re.I)
+          GROUP = re.compile(r'triple\s*s|트리플\s*에스|トリプルS|모드하우스|modhaus|\bglow\b|hatchi|∞!|\bmsnz\b',re.I)
+          FANCAM = re.compile(r'직캠|fancam|focus\s*cam|facecam|입덕직캠|세로캠|fan\s*cam|chikko|チッケム',re.I)
+          STAGE = re.compile(r'무대|stage|performance|dance practice|음악중심|뮤직뱅크|인기가요|엠카|쇼챔|show champion|music bank|inkigayo|mcountdown',re.I)
+          SIGNAL = re.compile(r'signal|시그널|secretbase|sss?ignal',re.I)
+          LIVE = re.compile(r'라이브|\blive\b|생방송|위버스',re.I)
+          MUSIC = re.compile(r'\bmv\b|music video|official video|뮤직비디오',re.I)
+          INVALID = re.compile(r'리액션|reaction|cover|커버|ai\s*cover|가사\s*해석|lyrics|fanmade|팬메이드',re.I)
+          
+          # These channel labels are used only for presentation, not as proof of verification.
+          BROADCASTER = re.compile(r'KBS|MBC|SBS|Mnet|M2$|THE K-POP|ALL THE K-POP|1theK|쇼챔|Show Champion|Studio Choom',re.I)
+          OFFICIAL_NAME = re.compile(r'^tripleS\s*official$',re.I)
+          VIDEO_ID = re.compile(r'^[A-Za-z0-9_-]{11}$')
+          
+          
+          def api(endpoint: str, **params):
+              query=urlencode({**params,'key':KEY})
+              url=f'{API}/{endpoint}?{query}'
+              try:
+                  with urlopen(Request(url,headers={'User-Agent':'CHAEWON-ARCHIVE-VIDEO/1.0'}),timeout=30) as resp:
+                      return json.loads(resp.read(5_000_000))
+              except HTTPError as err:
+                  details=''
+                  try:
+                      obj=json.loads(err.read(6000))
+                      details=str(obj.get('error',{}).get('errors',[{}])[0].get('reason',''))
+                  except Exception:
+                      pass
+                  # Never print the full request URL since it includes the API key.
+                  raise RuntimeError(f'YouTube {endpoint}: HTTP {err.code}, reason={details}') from None
+          
+          
+          def text(v):return str(v or '').strip()
+          
+          def day(date):
+              s=text(date)
+              try:
+                  return dt.date.fromisoformat(s[:10]).isoformat()
+              except ValueError:
+                  return None
+          
+          
+          def classify(t):
+              if FANCAM.search(t): return 'performance','fancam'
+              if SIGNAL.search(t): return 'signal','signal'
+              if LIVE.search(t): return 'live','live'
+              if STAGE.search(t): return 'performance','stage'
+              if MUSIC.search(t): return 'music','official-music'
+              return 'other','official-or-other'
+          
+          
+          def row_from_video(v, search_terms):
+              vid=text(v.get('id'))
+              sn=v.get('snippet') or {}
+              status=v.get('status') or {}
+              if not VIDEO_ID.fullmatch(vid): return None
+              if status.get('privacyStatus') != 'public' or status.get('embeddable') is not True:return None
+              title=text(sn.get('title'))
+              description=text(sn.get('description'))
+              channel=text(sn.get('channelTitle'))
+              # Require group and member in video metadata; stricter for automatic import.
+              combined=title+'\n'+description[:5000]
+              if not GROUP.search(combined) or not MEMBER.search(combined): return None
+              if INVALID.search(title): return None
+              named_title=bool(MEMBER.search(title))
+              group_title=bool(GROUP.search(title))
+              official_channel=bool(OFFICIAL_NAME.fullmatch(channel))
+              tv_channel=bool(BROADCASTER.search(channel))
+              category,subtype=classify(title)
+              # Titles about only one of these are ambiguous; require manual review.
+              priority='high' if named_title and (group_title or official_channel or tv_channel) else 'review'
+              return {
+                  'youtubeId': vid, 'title': title[:200],
+                  'publishedAt': day(sn.get('publishedAt')),
+                  'memberIds':['S21'], 'group':'tripleS',
+                  'scope':'solo' if named_title and FANCAM.search(title) else 'unknown',
+                  'category':category,'subCategory':subtype,
+                  'source':channel[:100], 'channelId':text(sn.get('channelId')),
+                  'videoUrl':'https://www.youtube.com/watch?v='+vid,
+                  'descriptionExcerpt':description[:350],
+                  'queries':sorted(set(search_terms)),
+                  'reviewPriority':priority,
+                  'verified':False,  # Search result / metadata are NOT proof of appearance.
+                  'note':'YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)',
+              }
+          
+          
+          def fetch_all():
+              ids_to_queries={}
+              count=0
+              for q in SEARCHES:
+                  page=''
+                  for _ in range(PAGES):
+                      args={'part':'snippet','q':q,'type':'video','maxResults':50,
+                            'videoEmbeddable':'true','safeSearch':'none','order':'relevance'}
+                      if page:args['pageToken']=page
+                      response=api('search',**args)
+                      count+=1
+                      for x in response.get('items',[]):
+                          ident=text((x.get('id') or {}).get('videoId'))
+                          if VIDEO_ID.fullmatch(ident): ids_to_queries.setdefault(ident,set()).add(q)
+                      page=text(response.get('nextPageToken'))
+                      if not page:break
+              records=[]
+              ids=list(ids_to_queries)
+              for offset in range(0,len(ids),50):
+                  response=api('videos',part='snippet,status',id=','.join(ids[offset:offset+50]))
+                  for v in response.get('items',[]):
+                      row=row_from_video(v,ids_to_queries.get(v.get('id'),set()))
+                      if row:records.append(row)
+              records.sort(key=lambda x:(x.get('publishedAt') or '',x['youtubeId']),reverse=True)
+              return records,{'searchCalls':count,'rawDistinctVideos':len(ids),'matchedVideos':len(records)}
+          
+          
+          def read_json(path,default):
+              if not path.is_file():return default
+              return json.loads(path.read_text('utf8'))
+          
+          
+          def save(path,obj):
+              path.parent.mkdir(parents=True,exist_ok=True)
+              t=path.with_suffix(path.suffix+'.tmp')
+              t.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+              t.replace(path)
+          
+          
+          def publish(items, approval_ids):
+              data=read_json(FILMS,{'version':3,'items':[]})
+              if not isinstance(data,dict) or not isinstance(data.get('items'),list):
+                  raise RuntimeError('Existing films.json shape unknown; will not overwrite')
+              old=data['items']
+              existing=set()
+              for x in old:
+                  if not isinstance(x,dict):continue
+                  current=text(x.get('youtubeId') or x.get('videoId'))
+                  if VIDEO_ID.fullmatch(current): existing.add(current)
+              index={x['youtubeId']:x for x in items}
+              missing=sorted(approval_ids-index.keys())
+              if missing:
+                  raise RuntimeError(f'{len(missing)} approved IDs not returned by current search; do not publish')
+              added=[]
+              for vid in approval_ids:
+                  if vid in existing:continue
+                  r=index[vid]
+                  # Member IDs and dates are based on queried metadata and user's review.
+                  old.append({k:r[k] for k in ('youtubeId','title','category','subCategory','publishedAt','memberIds','group','scope','source','channelId','videoUrl','verified','note')})
+                  existing.add(vid)
+                  added.append(vid)
+              if added:
+                  old.sort(key=lambda r:(text(r.get('publishedAt') or r.get('date')),text(r.get('youtubeId'))),reverse=True)
+                  data['items']=old
+                  data['version']=max(int(data.get('version',1)),3)
+                  data['updatedAt']=dt.datetime.now(dt.timezone.utc).isoformat()
+                  save(FILMS,data)
+              return len(added),len(approval_ids)-len(added),len(old)
+          
+          
+          def main():
+              if MODE not in ('scan','publish_all'):
+                  raise SystemExit('mode must be scan or publish_all')
+              if not KEY:
+                  raise SystemExit('Missing Actions secret YOUTUBE_API_KEY (YouTube Data API v3)')
+              if PAGES not in (1,2):
+                  raise SystemExit('pages_per_query must be 1 or 2')
+          
+              found,stat=fetch_all()
+              reviewed_ids={row['youtubeId'] for row in found}
+              new_count=duplicates=0
+              total=None
+              if MODE=='publish_all':
+                  # Publish all searchable public + embeddable matches. Every entry remains
+                  # marked verified:false because metadata cannot establish real appearance.
+                  new_count,duplicates,total=publish(found,reviewed_ids)
+          
+              prev=read_json(REPORT,{})
+              previous={x['youtubeId']:x for x in prev.get('candidates',[]) if isinstance(x,dict)
+                        and VIDEO_ID.fullmatch(text(x.get('youtubeId')))}
+              for item in found:
+                  old=previous.get(item['youtubeId'],{})
+                  previous[item['youtubeId']]={**item,'status':
+                    'published' if MODE=='publish_all' or old.get('status')=='published' else 'pending'}
+              report={'generatedAt':dt.datetime.now(dt.timezone.utc).isoformat(),
+                'note':'YouTube 검색 메타데이터 일치 후보를 공개했습니다. S21 실제 출연은 개별 미검증이며 원본 영상을 링크/임베드합니다. 정정이 필요한 영상은 photos와 별개로 films.json에서 삭제하세요.',
+                'queries':SEARCHES,'summary':{**stat,'storedCandidates':len(previous),
+                   'newlyPublished':new_count,'duplicatesSkipped':duplicates,'totalFilms':total},
+                'candidates':sorted(previous.values(),key=lambda x:(text(x.get('publishedAt')),x['youtubeId']),reverse=True)}
+              save(REPORT,report)
+              summary=(f'### CHAEWON FILM · {MODE}\n'
+                       f'- YouTube search queries: {len(SEARCHES)} | search calls: {stat["searchCalls"]}\n'
+                       f'- Search results (distinct): {stat["rawDistinctVideos"]}\n'
+                       f'- Public & embeddable tripleS+S21 metadata matches: {stat["matchedVideos"]}\n'
+                       f'- Added to FILM: {new_count}; existing skipped: {duplicates}\n'
+                       f'- FILM total after update: {total if total is not None else "unchanged"}\n'
+                       '- Entries marked `verified:false` (appearance not individually confirmed).\n'
+                       '- No video files downloaded, only YouTube links and metadata.\n')
+              print(summary)
+              if os.getenv('GITHUB_STEP_SUMMARY'):
+                  with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as out:
+                      out.write(summary)
+          
+          
+          if __name__=='__main__': main()
+          PY
+      - name: Commit S21 FILM data (preserve existing entries)
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- reports/chaewon-youtube-review.json
+          if test -f public/data/films.json; then
+            git add -- public/data/films.json
+          fi
+          if git diff --cached --quiet; then
+            echo 'No new YouTube results to commit.'
+          else
+            git commit -m 'data: publish CHAEWON YouTube metadata matches'
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
