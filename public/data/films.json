@@ -1,12 +1,1831 @@
 {
-  "version": 1,
-  "updatedAt": "2026-11-22",
+  "version": 3,
+  "updatedAt": "2026-11-22T04:05:30.266302+00:00",
   "items": [
     {
-      "youtubeId": "BqtKrYKOPd4",
-      "title": "tripleS 트리플에스 : KimChaeWon.SSS",
+      "youtubeId": "oVJXTxs0CNs",
+      "title": "어디서나 잘 자는 이유",
       "category": "other",
-      "publishedAt": "2024-04-01",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "트리플웨이브 / tripleWAV",
+      "channelId": "UCaxes3qo3me4waCnMSRktNw",
+      "videoUrl": "https://www.youtube.com/watch?v=oVJXTxs0CNs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "nAkkSp13mY0",
+      "title": "꿈에서도 못 말리는 모찌즈 ❘ tripleS(트리플에스) 김채원 정하연 ❘ 261114 코스모톡",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=nAkkSp13mY0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "LwOw7ZdtkAQ",
+      "title": "닿멘이어라~ ❘ tripleS(트리플에스)²¹ 김채원 ❘ 261114 Offstage in 뉴욕",
+      "category": "performance",
+      "subCategory": "stage",
+      "publishedAt": "2026-11-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=LwOw7ZdtkAQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "YzTRI8A78fg",
+      "title": "261111 트리플에스 김채원 CHEER UP 직캠 ANDLESS in Toronto",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-11-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=YzTRI8A78fg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "7Qu8GPKq-6w",
+      "title": "261111 트리플에스 김채원 I Want You To Know 직캠 ANDLESS in Toronto",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-11-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=7Qu8GPKq-6w",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "RJigGvQeDBc",
+      "title": "협박하는 건달 딸기 ❘ tripleS(トリプルS)²¹ 김채원 ❘ 261110 ICN 출국 to Toronto, Canada",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=RJigGvQeDBc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "1ktQ867a8Io",
+      "title": "261010 tripleS Chaewon fancam 트리플에스 김채원 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-11-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "K-POP-YEOK",
+      "channelId": "UCZF2rWi3jgJN0s4pmBujapQ",
+      "videoUrl": "https://www.youtube.com/watch?v=1ktQ867a8Io",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "p07WQxaMBnI",
+      "title": "261024 트리플에스 김채원 CHEER UP 직캠 ANDLESS in Macau",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-11-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=p07WQxaMBnI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "E3X06CHMmlg",
+      "title": "[트리플에스] 많이 녹슨 채원이의 쌍절곤",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "러블린 Lovelynn",
+      "channelId": "UCvFzbVYcpI9SNTz2JHYJqZA",
+      "videoUrl": "https://www.youtube.com/watch?v=E3X06CHMmlg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "e-Schc0BK2I",
+      "title": "상여자 채원이 #트리플에스 #triples #김채원 #채원 #서아",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오리배선장연지",
+      "channelId": "UC1yTNfT0PsEe06LU_versxA",
+      "videoUrl": "https://www.youtube.com/watch?v=e-Schc0BK2I",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Wo2ERg_1Pmc",
+      "title": "엄마와 딸의 케미 서연 x 채원 모음zip",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "WAVSSS",
+      "channelId": "UCuOxlD2cNtNRpSerYNvRCbQ",
+      "videoUrl": "https://www.youtube.com/watch?v=Wo2ERg_1Pmc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Kz0-DPeiNH0",
+      "title": "[트리플에스] 채원이의 전교회장 찍먹",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-06",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "러블린 Lovelynn",
+      "channelId": "UCvFzbVYcpI9SNTz2JHYJqZA",
+      "videoUrl": "https://www.youtube.com/watch?v=Kz0-DPeiNH0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "nTv-NBSTbLQ",
+      "title": "월드투어 일본콘 마치고 입국하는 트리플에스 채원 ❘ 261103 tripleS(トリプルS) 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-11-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=nTv-NBSTbLQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "cdy0qaTny9k",
+      "title": "[4K60FPS] 261010 TRIPLES CHAEWON 'CHEER UP' FANCAM @ tripleS World Tour [ANDLESS] in Seoul Day 1",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "oddeyecams",
+      "channelId": "UCKB9j800-dulb-eTvJfhIKA",
+      "videoUrl": "https://www.youtube.com/watch?v=cdy0qaTny9k",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "CBqaBdcP22M",
+      "title": "트리플에스 월드투어, 왹냥 in 도쿄 ❘ tripleS(トリプルS) 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=CBqaBdcP22M",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "rK9TfuHmnI0",
+      "title": "체크인…오네가이시마스 #트리플에스 #triples #김채원 #카에데 #채원 #트리플에스채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오리배선장연지",
+      "channelId": "UC1yTNfT0PsEe06LU_versxA",
+      "videoUrl": "https://www.youtube.com/watch?v=rK9TfuHmnI0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "xdhVCmW_6WY",
+      "title": "트리플에스 덕질하기 좋은 5명",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-27",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "인플루 KPOP",
+      "channelId": "UCtJ_Etc8Q89dozDm1nDJ-Uw",
+      "videoUrl": "https://www.youtube.com/watch?v=xdhVCmW_6WY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ntW72Ti8OAQ",
+      "title": "닿멘이어라~ ❘ tripleS(트리플에스)²¹ 김채원 ❘ 261025 입국 from Macau",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=ntW72Ti8OAQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "i7BHW0SzIFY",
+      "title": "[4K] 261018 트리플에스 tripleS  - 'Rising' 「 채원 직캠 Chaewon Fancam 」 @ Andless World Tour Taipei",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Kioku",
+      "channelId": "UCrSjCIwZB6yHgQnFt7ZyeIA",
+      "videoUrl": "https://www.youtube.com/watch?v=i7BHW0SzIFY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "YvNaFSWRaAU",
+      "title": "🍓👸 #triples #트리플에스 #chaewon #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "峰峰",
+      "channelId": "UCgJzAoV8Q6SmKQpbwDphiZQ",
+      "videoUrl": "https://www.youtube.com/watch?v=YvNaFSWRaAU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Qn4xZhSqD3U",
+      "title": "이보다 더 귀여울 순 없다 ❘ tripleS(트리플에스)²¹ 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=Qn4xZhSqD3U",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "mcoLUtchN_Q",
+      "title": "카리스마 쩌는 잘생쁜 오빠 ❘ tripleS(트리플에스)²¹ 김채원 ❘ 261023 ICN 출국 to Macau",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-23",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=mcoLUtchN_Q",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "xmU3jQzACEs",
+      "title": "[MPD직캠] 트리플에스 채원 직캠 4K 'Andless' (tripleS ChaeWon FanCam) | @MCOUNTDOWN_2026.10.22",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-22",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "M2",
+      "channelId": "UCTQVIXvcHrR9jYoJ6qaBAow",
+      "videoUrl": "https://www.youtube.com/watch?v=xmU3jQzACEs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "m4U0a8J4wNE",
+      "title": "261018 트리플에스 김채원 Baby Flower 직캠 ANDLESS in Taipei",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-22",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=m4U0a8J4wNE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ulUlBMnNaQ0",
+      "title": "팬이랑 플러팅하는 트리플에스²¹ 김채원 ❘ 261019 Taipei Airport, Taiwan",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=ulUlBMnNaQ0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "fhuM3nW_P3Q",
+      "title": "준비된 딸기 농부 채원이 #트리플에스 #triples #김채원 #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-19",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오리배선장연지",
+      "channelId": "UC1yTNfT0PsEe06LU_versxA",
+      "videoUrl": "https://www.youtube.com/watch?v=fhuM3nW_P3Q",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "WLR1w6ySUG0",
+      "title": "🍓 #triples #트리플에스 #chaewon #채원 #andless",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-19",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "cataLYze",
+      "channelId": "UCu2t3aBmxDf8Wy9oZEh5x8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=WLR1w6ySUG0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "5GbrWGBsb7w",
+      "title": "대만 'ANDLESS' 콘서트 마치고 입국하는 트리플에스 김채원 ❘ 261019 tripleS(トリプルエス)",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-19",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=5GbrWGBsb7w",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "lFvJ4MUce3Y",
+      "title": "261018 tripleS World Tour ＜ANDLESS＞ in Taipei - cheer up (Chaewon fancam)",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-18",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "東京アツオ Atsuo",
+      "channelId": "UC2AyoLVwlQYjXVYbNXunojw",
+      "videoUrl": "https://www.youtube.com/watch?v=lFvJ4MUce3Y",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ck4e_EKK_lk",
+      "title": "[4k] tripleS - 김채원 Sad Girls Schemin'│261011 ANDLESS IN SEOUL",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "탐정단_fancam",
+      "channelId": "UC1rOT3z-8HaSUw3JDC2au6g",
+      "videoUrl": "https://www.youtube.com/watch?v=ck4e_EKK_lk",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "zLEaaNR1pdc",
+      "title": "261011 트리플에스(tripleS) 콘서트 사운드체크 S21 채원 Baby Flower",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-14",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "럭키포츈  LuckyFortune",
+      "channelId": "UCdY4IV7XpkYQwMqmdm6AQvA",
+      "videoUrl": "https://www.youtube.com/watch?v=zLEaaNR1pdc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "v1XFfsQw3p8",
+      "title": "마유의 샤샤샤 vs 채원의 샤샤샤 ❘ tripleS(トリプルS) / 202610-11 tripleS World Tour ＜ANDLESS＞ in Seoul",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=v1XFfsQw3p8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "c074XbmceHo",
+      "title": "261011 트리플에스(tripleS) 김채원(Kim ChaeWon) - CHEER UP ANDLESS 콘서트 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "카르바할 CARVAJAL",
+      "channelId": "UCkjVEi8KBNNtZdITMY3bf3g",
+      "videoUrl": "https://www.youtube.com/watch?v=c074XbmceHo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Y7vAgcf6H5k",
+      "title": "261011 트리플에스 김채원 Baby Flower, Non Scale 직캠 4K60p tripleS fancam",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "걸그룹갤러리",
+      "channelId": "UCNudC2C7RuymoUJ37fE-pag",
+      "videoUrl": "https://www.youtube.com/watch?v=Y7vAgcf6H5k",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "iTvx4mCzMmw",
+      "title": "𝑾𝒆 𝑻𝒐𝒐 𝑨𝒏𝒅𝒍𝒆𝒔𝒔❤️‍🔥 #tripleS #트리플에스 #HaYeon #하연 #ChaeWon #채원 #Andless",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=iTvx4mCzMmw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "cTbBLqIu8cg",
+      "title": "만두머리 채원의 상처, 고난, 또 눈물 흘리지마! ❘ 261011 tripleS World Tour ＜ANDLESS＞ in Seoul",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=cTbBLqIu8cg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "iStPVnF6BEY",
+      "title": "261010 트리플에스(tripleS) 채원(ChaeWon) - CHEER UP Fancam @Andless Concert Day1",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "연지몰래채원",
+      "channelId": "UCev4BrJfiv5EZPNWQOsygHw",
+      "videoUrl": "https://www.youtube.com/watch?v=iStPVnF6BEY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "AvroqYw1Jw0",
+      "title": "It's really concerning..#chaewon #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Enhaville⋆",
+      "channelId": "UCnJDQd7gXzRJucelGEfKaJA",
+      "videoUrl": "https://www.youtube.com/watch?v=AvroqYw1Jw0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "xmg-_rWb4VQ",
+      "title": "POV: Someone’s wearing the same outfit as you👀 #tripleS #트리플에스#SeoYeon #서연#ChaeWon #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=xmg-_rWb4VQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "II-YBc6RkqU",
+      "title": "트리플에스 김채원 서울드라마어워즈 출근길 #CHAEWON #김채원 #tripleS #트리플에스",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Spinel CAM",
+      "channelId": "UCS7W22-coWXOmlyN97S2pvg",
+      "videoUrl": "https://www.youtube.com/watch?v=II-YBc6RkqU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "4rj2lmwUeIo",
+      "title": "트리플에스 김채원, 상처 입은 손을 내밀어 줄게 #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=4rj2lmwUeIo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "gE7FFAMF4Ns",
+      "title": "#트리플에스 점점 더 예뻐지는 딸기 농부 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-10-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=gE7FFAMF4Ns",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "64BuRsTRmoo",
+      "title": "트리플에스 (tripleS) 김채원 (Chaewon) Girls Never Die (걸스 네버 다이) [4K60P] 260930 전북대학교 직캠 by ECU",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-10-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=64BuRsTRmoo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "jdFD3bcx59I",
+      "title": "트리플에스 (tripleS) 김채원 (Chaewon) Baby Flower (베이비 플라워) [4K60P] 260930 전북대학교 직캠 by ECU",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=jdFD3bcx59I",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "mamN_XJ8n60",
+      "title": "트리플에스 토네와 함께 일본어 프리 토킹 ❘ tripleS(トリプルエス) 김채원 코토네 ❘ 260928 코스모 라이브",
+      "category": "live",
+      "subCategory": "live",
+      "publishedAt": "2026-09-29",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=mamN_XJ8n60",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "joDgkECrEgY",
+      "title": "배틀로얄(Battle Royale) 그녀 ❘ tripleS(트리플에스)²¹ 김채원 ❘ 2026 더팩트 뮤직 어워즈, Baby Flower",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-28",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=joDgkECrEgY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "izvMVlRlrTs",
+      "title": "과잠이 이렇게 잘 어울릴 일인가? #채원 #트리플에스 ♬ Love2Love #tripleS #ChaeWon #러브투러브",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-28",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "K-POP 날것이 좋아",
+      "channelId": "UC70Hwe3nc_0I09_hgrYJsSg",
+      "videoUrl": "https://www.youtube.com/watch?v=izvMVlRlrTs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "UN7gAjcQM9M",
+      "title": "트리플에스 김채원 Rising #CHAEWON #김채원 #tripleS #트리플에스",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Spinel CAM",
+      "channelId": "UCS7W22-coWXOmlyN97S2pvg",
+      "videoUrl": "https://www.youtube.com/watch?v=UN7gAjcQM9M",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "4LSUpIvbcWk",
+      "title": "넌 날 궁금하게 만들어! ❘ tripleS(트리플에스)²¹ 김채원 ❘ 260920, 2026 안양춤축제(Anyang Dance Festival)",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-23",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=4LSUpIvbcWk",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "3mTIMUfG5Gc",
+      "title": "애교 작전 실패한 채원이 #트리플에스 #triples #김채원 #배지전쟁4",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-22",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오리배선장연지",
+      "channelId": "UC1yTNfT0PsEe06LU_versxA",
+      "videoUrl": "https://www.youtube.com/watch?v=3mTIMUfG5Gc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "YYH5_9s5pZQ",
+      "title": "[4K60P] 260920 트리플에스(tripleS) - '깨어 (Are You Alive)' 김채원 직캠 | 안양춤축제 in 평촌중앙공원",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-21",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "무슨 말이 필요해",
+      "channelId": "UCf5WKpIBAdxHYIlwzIKWvUw",
+      "videoUrl": "https://www.youtube.com/watch?v=YYH5_9s5pZQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "0xT5ZVLj2Ls",
+      "title": "트리플에스²¹ 채원이 2026 더팩트 뮤직 어워즈(TMA)에서 단발한 이유 ❘ 260920 코스모톡",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-21",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=0xT5ZVLj2Ls",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "vhA3J5sNKZ8",
+      "title": "트리플에스 김채원, 하나가 되자 #tripleS Girls Never Die 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-19",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=vhA3J5sNKZ8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "aM5oSIOE43Y",
+      "title": "260917 트리플에스(tripleS) 김채원 - Love2Love / 국립공주대학교 천안캠퍼스 축제",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-18",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Today's Sunshine (레뮤라스)",
+      "channelId": "UCCiiNOwUFXlqHXWxvOeBOgw",
+      "videoUrl": "https://www.youtube.com/watch?v=aM5oSIOE43Y",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "30QaXZbVeLQ",
+      "title": "트리플에스 김채원, 왜 날 힘들게 울게만 둔 건지 #tripleS Girls Never Die 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-18",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=30QaXZbVeLQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "o-tSmuoe430",
+      "title": "트리플에스 채원 직캠 풀버전 tripleS ChaeWon fancam 260917 공주대축제",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "사악키",
+      "channelId": "UC6BKT3iS9-2m6q3lEqz4a4Q",
+      "videoUrl": "https://www.youtube.com/watch?v=o-tSmuoe430",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "6Q9_3qe5X3c",
+      "title": "너무아름다우신🍓 #김채원 #트리플에스 #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-16",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "걸그룹갤러리",
+      "channelId": "UCNudC2C7RuymoUJ37fE-pag",
+      "videoUrl": "https://www.youtube.com/watch?v=6Q9_3qe5X3c",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "xBiGhv5t6kI",
+      "title": "트리플에스 채원 \"Love2Love+깨어+GirlsNeverDie\" 직캠 tripleS ChaeWon fancam 260915 강원대축제",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "사악키",
+      "channelId": "UC6BKT3iS9-2m6q3lEqz4a4Q",
+      "videoUrl": "https://www.youtube.com/watch?v=xBiGhv5t6kI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "iXy8CX4EDGo",
+      "title": "260915 트리플에스 김채원 Baby Flower 직캠 4K60p tripleS fancam",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "걸그룹갤러리",
+      "channelId": "UCNudC2C7RuymoUJ37fE-pag",
+      "videoUrl": "https://www.youtube.com/watch?v=iXy8CX4EDGo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "QMBKw76u6xw",
+      "title": "트리플에스 채원 \"Baby Flower+인사+Rising\" 직캠 tripleS ChaeWon fancam 260915 강원대축제",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "사악키",
+      "channelId": "UC6BKT3iS9-2m6q3lEqz4a4Q",
+      "videoUrl": "https://www.youtube.com/watch?v=QMBKw76u6xw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "IjmkarsPPHo",
+      "title": "[트리플에스] 김채원) 채원이 삼행시 좀 치는 듯",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "단풍유연",
+      "channelId": "UCcBAVgW8ywTqWZr5cNInstw",
+      "videoUrl": "https://www.youtube.com/watch?v=IjmkarsPPHo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "B94qf6A7Uts",
+      "title": "260915 트리플에스 tripleS - Girls Never Die | 김채원 Kim ChaeWon 가로 직캠 | 강원대학교 춘천캠 축제 [KPOP FanCam 4K]",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Bamp VIDEO 8K",
+      "channelId": "UCkVbWLs60QaCIGPw61KBHeA",
+      "videoUrl": "https://www.youtube.com/watch?v=B94qf6A7Uts",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "LMTkiqZT01E",
+      "title": "⁎˚ WAV의 인생을 구하러온 찰나의 채원 🍓 ˚ ⁎ #tripleS #트리플에스#ChaeWon #채원#Baby_Flower",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=LMTkiqZT01E",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "L8nyT7Y2wk4",
+      "title": "[4K] 260910 트리플에스 김채원 - Rising | 2026 서울과학기술대학교 축제",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Zereu",
+      "channelId": "UCD0thlI0u85JXsFVQYtaD_g",
+      "videoUrl": "https://www.youtube.com/watch?v=L8nyT7Y2wk4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "AmlZVzG7F7U",
+      "title": "260910 트리플에스 김채원 Rising, Love2Love, 깨어, Girls Never Die 직캠 4K60p tripleS fancam",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "걸그룹갤러리",
+      "channelId": "UCNudC2C7RuymoUJ37fE-pag",
+      "videoUrl": "https://www.youtube.com/watch?v=AmlZVzG7F7U",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "v_0sMM-8f0k",
+      "title": "260827 트리플에스 김채원 Rising 직캠 강진하맥축제",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-09-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=v_0sMM-8f0k",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "q2oVhyMkK-o",
+      "title": "귀여운 트리플에스 김채원 공항룩 #CHAEWON #김채원 #tripleS #트리플에스",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Spinel CAM",
+      "channelId": "UCS7W22-coWXOmlyN97S2pvg",
+      "videoUrl": "https://www.youtube.com/watch?v=q2oVhyMkK-o",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "d4VOU25VhBo",
+      "title": "[트리플에스]김채원 수난시대",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-09-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "파도SSS",
+      "channelId": "UCn-hcjKQWqlK8ncO9bFx9-Q",
+      "videoUrl": "https://www.youtube.com/watch?v=d4VOU25VhBo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "SIPmNgnwpx0",
+      "title": "나 채원이는 필요 없어 ❘ 무시하지마!! ❘ 트리플에스 배지전쟁4 EP.2",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-08-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=SIPmNgnwpx0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Mk8ojhiBYh4",
+      "title": "260830 트리플에스 김채원 Baby Flower 직캠 점프업이엔티 팬싸",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-08-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=Mk8ojhiBYh4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "7ZUCgm8QcJ0",
+      "title": "[트리플에스] 코토네: 병약한 김채원은 필요없어 #shorts #트리플에스 #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-08-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "병아리콩주빈",
+      "channelId": "UCdTWcoSWUSScsolYKIGskVw",
+      "videoUrl": "https://www.youtube.com/watch?v=7ZUCgm8QcJ0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Dbv4GsGBgqI",
+      "title": "긴 생머리로 돌아온 딸기공주 채원이 | 260827 트리플에스 김채원 깨어 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-08-28",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=Dbv4GsGBgqI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "m_luAaFcE4U",
+      "title": "[ENG SUB] tripleS(트리플에스) Chaewon(채원) 🎀 31st Cosmo Live | Perfume Talk & Driver's License | 260823",
+      "category": "live",
+      "subCategory": "live",
+      "publishedAt": "2026-08-23",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Parrotsub",
+      "channelId": "UCRON1rHVJtyLBEBy146TDnw",
+      "videoUrl": "https://www.youtube.com/watch?v=m_luAaFcE4U",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "jePsHHvwt_A",
+      "title": "[트리플에스] 말투와 톤이 웃음 치트키인 채원이 #shorts",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-08-22",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "원투트리플데이",
+      "channelId": "UCk1VVBmxhgzhRmcHxi-plJw",
+      "videoUrl": "https://www.youtube.com/watch?v=jePsHHvwt_A",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Bha9Qaa5wy4",
+      "title": "[트리플에스] 김채원) 비틱의 신",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-08-22",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "단풍유연",
+      "channelId": "UCcBAVgW8ywTqWZr5cNInstw",
+      "videoUrl": "https://www.youtube.com/watch?v=Bha9Qaa5wy4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "garkn-SNeeY",
+      "title": "[ENG SUB] tripleS(트리플에스) Chaewon(채원) 🎀 30th Cosmo Live | Mala Rosé Mukbang & Screening Day | 260820",
+      "category": "live",
+      "subCategory": "live",
+      "publishedAt": "2026-08-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Parrotsub",
+      "channelId": "UCRON1rHVJtyLBEBy146TDnw",
+      "videoUrl": "https://www.youtube.com/watch?v=garkn-SNeeY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "O_eVvU-1PcU",
+      "title": "[트리플에스(김채원)] 얼굴만한 손 크기",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-08-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "지도준다이어리",
+      "channelId": "UCMClxudYxuIcGn5wpKaM98w",
+      "videoUrl": "https://www.youtube.com/watch?v=O_eVvU-1PcU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Fx88aJGHhAM",
+      "title": "고음불가??!! 트리플에스 채원 #트리플에스 #채원 #triples #chaewon #kpop #kpopidol",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-07-21",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "rorotv",
+      "channelId": "UCRXO8vKMfyGvj1Z1YXzJSXw",
+      "videoUrl": "https://www.youtube.com/watch?v=Fx88aJGHhAM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "uhSt1nGoX4E",
+      "title": "[4K] tripleS (트리플에스) CHAEWON (김채원) - 'Sad Girls Schemin'' @MusicBank 260612 UNOFFICIAL FANCAM",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-07-18",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "kpop up on",
+      "channelId": "UCHTPX4k1blzI8FPN7j6jjSQ",
+      "videoUrl": "https://www.youtube.com/watch?v=uhSt1nGoX4E",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "F7t45NsjOSI",
+      "title": "[트리플에스] 모두가 채원이의 번지점프를 바라는 상황... #shorts #트리플에스 #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-07-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "병아리콩주빈",
+      "channelId": "UCdTWcoSWUSScsolYKIGskVw",
+      "videoUrl": "https://www.youtube.com/watch?v=F7t45NsjOSI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "SuU2yFPz61E",
+      "title": "절친소 첫 회가 누구예요? .. 리센느 분들 ❘ 트리플에스 김채원 정하연 ❘ 절친소 EP.5",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-07-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=SuU2yFPz61E",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "_l_DNYtFCoM",
+      "title": "[트리플에스] 모찌즈 출신지 공개합니다",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-07-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "하연하다",
+      "channelId": "UCNDt-BaLmz_HN1ue4EpUjaA",
+      "videoUrl": "https://www.youtube.com/watch?v=_l_DNYtFCoM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Ns1XonFk8As",
+      "title": "[트리플에스] 김채원) 또 눈물...ㅠㅠ",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-07-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "단풍유연",
+      "channelId": "UCcBAVgW8ywTqWZr5cNInstw",
+      "videoUrl": "https://www.youtube.com/watch?v=Ns1XonFk8As",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "MORSNo3Drms",
+      "title": "트리플에스 채원이의 후쿠오카 먹방 브이로그 ❘ 나홀로 일본여행 ❘ 260625 프롬(Fromm) 셋로그",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-29",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=MORSNo3Drms",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "8VsiCnpS4RA",
+      "title": "250526 트리플에스 김채원 깨어 (Are You Alive) 직캠 신한대 축제",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-06-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=8VsiCnpS4RA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "zsQ4AmreaD8",
+      "title": "‘트리플에스 김채원’ 그냥 체질이 안 찌는거였던 뼈말라 의혹 #아이돌 #케이팝 #트리플에스 #김채원 #shorts",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "매혹의 향수",
+      "channelId": "UCGDVtJReiiTaff_V3tZyRNw",
+      "videoUrl": "https://www.youtube.com/watch?v=zsQ4AmreaD8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "UPGSboPWyyU",
+      "title": "트리플에스 채원의 후쿠오카 브이로그 ❘ 나홀로 일본여행 ❘ 260625 프롬(Fromm) 셋로그",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=UPGSboPWyyU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Fek5eX_pios",
+      "title": "단발이 너무 좋은 채원이 #트리플에스 #triples #김채원 #채원 #chaewon",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "빵시온",
+      "channelId": "UCBDctU-lpXjnt-rMetn6ktQ",
+      "videoUrl": "https://www.youtube.com/watch?v=Fek5eX_pios",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "g74L4iGlkX4",
+      "title": "코챌라 Baby Flower 기다렸지? #tripleS #트리플에스 #Kotone #코토네 #ChaeWon #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=g74L4iGlkX4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "-ZuZklX6q78",
+      "title": "[#음중직캠] tripleS KIM CHAEWON (트리플에스 김채원) – Baby Flower FanCam | 쇼! 음악중심 | MBC260613",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-06-13",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "MBCkpop",
+      "channelId": "UCe52oeb7Xv_KaJsEzcKXJJg",
+      "videoUrl": "https://www.youtube.com/watch?v=-ZuZklX6q78",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "2LLzWx1aK5U",
+      "title": "트리플에스 김채원 뮤직뱅크 출근길 #tripleS ##CHAEWON",
+      "category": "performance",
+      "subCategory": "stage",
+      "publishedAt": "2026-06-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Spinel CAM",
+      "channelId": "UCS7W22-coWXOmlyN97S2pvg",
+      "videoUrl": "https://www.youtube.com/watch?v=2LLzWx1aK5U",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "XQWHdp4Haw4",
+      "title": "[MPD직캠] 트리플에스 채원 직캠 4K 'Baby Flower' (tripleS ChaeWon FanCam) | @MCOUNTDOWN_2026.6.11",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-06-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "M2",
+      "channelId": "UCTQVIXvcHrR9jYoJ6qaBAow",
+      "videoUrl": "https://www.youtube.com/watch?v=XQWHdp4Haw4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "CgITuKmuqYA",
+      "title": "단발하고 리즈 갱신한 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오늘의케이팝",
+      "channelId": "UCINiJz-OA3inyORdSTNNBtw",
+      "videoUrl": "https://www.youtube.com/watch?v=CgITuKmuqYA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "8G-swFA9bPg",
+      "title": "딸기 공주 야호-! 🍓 #tripleS #트리플에스 #ChaeWon #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=8G-swFA9bPg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "e_9wk_b3GpU",
+      "title": "260606 트리플에스 음악중심 미니팬미팅 김채원 It's me 챌린지 #트리플에스 #tripleS #김채원 #CHAEWON",
+      "category": "performance",
+      "subCategory": "stage",
+      "publishedAt": "2026-06-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Power_",
+      "channelId": "UC37hl3Suk0c1T8o3MI1fxoQ",
+      "videoUrl": "https://www.youtube.com/watch?v=e_9wk_b3GpU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "s7DTvMDQxok",
+      "title": "MOST VIEWED tripleS Baby Flower FANCAM IN 24 HOURS #tripleS #yooyeon #yubin #hayeon #chaewon",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-06-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "DHinLA Quans",
+      "channelId": "UCA9-rgO_--HI0hhILbqGnMQ",
+      "videoUrl": "https://www.youtube.com/watch?v=s7DTvMDQxok",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "RGIcJsWg-ws",
+      "title": "상처, 고난.. 그리고 김채원 요정",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "딸기농장주🍓",
+      "channelId": "UCa6hEmTY5VDZcYyktH_x-Zg",
+      "videoUrl": "https://www.youtube.com/watch?v=RGIcJsWg-ws",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "GPfYUUFXnnA",
+      "title": "Thank God Chaewon is healing💖💪 #kpop #dance #chaewon #triples",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "𝐬𝐨𝐨𝐲𝐚_𝐱𝐱",
+      "channelId": "UC6cEp_3_JsyuO8lV-rSEhdg",
+      "videoUrl": "https://www.youtube.com/watch?v=GPfYUUFXnnA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "rUrsA7VI7lg",
+      "title": "[#음중직캠] tripleS KIM CHAEWON(트리플에스 김채원) – Baby Flower FanCam | 쇼! 음악중심 | MBC260606",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-06-06",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "MBCkpop",
+      "channelId": "UCe52oeb7Xv_KaJsEzcKXJJg",
+      "videoUrl": "https://www.youtube.com/watch?v=rUrsA7VI7lg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "GmZ0RkbM9so",
+      "title": "인형이 움직인다 #김채원 #트리플에스  #tripleS #CHAEWON",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-06",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Spinel CAM",
+      "channelId": "UCS7W22-coWXOmlyN97S2pvg",
+      "videoUrl": "https://www.youtube.com/watch?v=GmZ0RkbM9so",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "i6oQCVRRuyQ",
+      "title": "Chaewon is healthy now! 💗 #kpop #triples #chaewon #edit #fyp",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-05",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "jagr.ivyৎ",
+      "channelId": "UCJtNd_Vo8k4qr4pup8LFrlg",
+      "videoUrl": "https://www.youtube.com/watch?v=i6oQCVRRuyQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "zuAqPTcKQEI",
+      "title": "260601 tripleS 김채원 - It's Me 챌린지",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-06-02",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Zereu",
+      "channelId": "UCD0thlI0u85JXsFVQYtaD_g",
+      "videoUrl": "https://www.youtube.com/watch?v=zuAqPTcKQEI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "JUN2Him65jw",
+      "title": "260530 트리플에스 김채원 Baby Flower 직캠 메가콘서트",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-05-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=JUN2Him65jw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "FlR76k8fnfE",
+      "title": "Poor chaewon #kpop #katseye #triples #chaewon #goviral #fyp #shorts",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-05-29",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "𝘏𝘢𝘦𝘮𝘪𝘷𝘦𝘦",
+      "channelId": "UCrwuhGXWNzCrMDvpbSM7duA",
+      "videoUrl": "https://www.youtube.com/watch?v=FlR76k8fnfE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "nUiHFJVqqEE",
+      "title": "살 조금만 더 쪘으면 좋겠는 채원이 #김채원 #KimChaeWon #트리플에스 #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-05-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "그냥취미활동",
+      "channelId": "UCoFhwPtrmxmhUhFaqLJZ90w",
+      "videoUrl": "https://www.youtube.com/watch?v=nUiHFJVqqEE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "juIbjDsLm_w",
+      "title": "tripleS - Kim Chaewon - Are You Alive FANCAM",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-05-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "tripleS-nanana",
+      "channelId": "UCzQ8iHthl58C7fQPaA0yTig",
+      "videoUrl": "https://www.youtube.com/watch?v=juIbjDsLm_w",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "vu37I5oN7ZI",
+      "title": "What’s Happening To TripleS Chaewon Is Concerning…",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-05-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Kelly Scholas",
+      "channelId": "UCMkZtA0kG5Xy8Tyf4gFjBHw",
+      "videoUrl": "https://www.youtube.com/watch?v=vu37I5oN7ZI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "YsGezcaTqh8",
+      "title": "채원 공주님 생일 축하하거라 | tripleS : SIGNAL LIVE 260502",
+      "category": "signal",
+      "publishedAt": "2026-05-02",
       "memberIds": [
         "S21"
       ],
@@ -16,30 +1835,939 @@
       "verified": true
     },
     {
-      "youtubeId": "2tda_TCjz8w",
-      "title": "tripleS 'Girls Never Die' Official MV",
-      "category": "music",
-      "publishedAt": "2024-05-08",
+      "youtubeId": "byif-bcSiH8",
+      "title": "어이쿠야 .. 피지컬 차이 보소 😮 #김채연 #김채원 #트리플에스 #tripleS #ChaeYeon #ChaeWon #채연 #보니하니",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-29",
       "memberIds": [
         "S21"
       ],
       "group": "tripleS",
-      "scope": "group",
-      "source": "tripleS official",
-      "verified": true
+      "scope": "unknown",
+      "source": "K-POP 날것이 좋아",
+      "channelId": "UC70Hwe3nc_0I09_hgrYJsSg",
+      "videoUrl": "https://www.youtube.com/watch?v=byif-bcSiH8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
     },
     {
-      "youtubeId": "9bfWvaQskLU",
-      "title": "tripleS Glow '내적 댄스 (Inner Dance)' Official Performance",
+      "youtubeId": "C6ocSx5Wfio",
+      "title": "'팬 발견' 트리플에스(tripleS) 김채원 직캠 @MySecretNewZone",
       "category": "performance",
-      "publishedAt": "2024-06-26",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-27",
       "memberIds": [
         "S21"
       ],
-      "group": "Glow",
-      "scope": "unit",
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=C6ocSx5Wfio",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "HjFgmzDI0E0",
+      "title": "🍓따라 follow me ✧ #tripleS #트리플에스 #ChaeWon #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
       "source": "tripleS official",
-      "verified": true
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=HjFgmzDI0E0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "GEWpMDMuvxs",
+      "title": "김채원 뼈말라 비주얼 #김채원 #트리플에스 #CHAEWON #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Spinel CAM",
+      "channelId": "UCS7W22-coWXOmlyN97S2pvg",
+      "videoUrl": "https://www.youtube.com/watch?v=GEWpMDMuvxs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "k47rNrKuePQ",
+      "title": "활동 중단하라는데 본인은 괜찮다는 트리플에스 '김채원'",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-21",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "아이돌탐정",
+      "channelId": "UCHvxPNyZctDF65F8ahlgpYA",
+      "videoUrl": "https://www.youtube.com/watch?v=k47rNrKuePQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "jN-yZefrYWw",
+      "title": "'깨어나 이제' 트리플에스(tripleS) 김채원 깨어 직캠 @MySecretNewZone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-21",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=jN-yZefrYWw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "mYEtR52avCI",
+      "title": "'더 크게 불어볼래~' 트리플에스(tripleS) 김채원 Bubble Gum Girl 직캠 @MySecretNewZone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=mYEtR52avCI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "k-YHgDyVT20",
+      "title": "'터질지 몰라 Bubble Gum' 트리플에스(tripleS) 김채원 Bubble Gum Girl 직캠 @MySecretNewZone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=k-YHgDyVT20",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "g_ezxHciSZ8",
+      "title": "ChaeWon from TripleS . #kpop #triples #chaewon",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "𝗍𝖺𝗒𝖺𝗌𝗁𝗂 ⊹",
+      "channelId": "UC2HieTYEmI4-9ubRjLbbYAA",
+      "videoUrl": "https://www.youtube.com/watch?v=g_ezxHciSZ8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "P4diq1ov6o0",
+      "title": "#JUSTIÇA :: sei q tem muito mais 😓 || #fypyoutube #kpop #chaewon #triples #illit #moka #unis",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Leh .ᐟ",
+      "channelId": "UCC5sZYbYmf1Qwj0EGcjP9aw",
+      "videoUrl": "https://www.youtube.com/watch?v=P4diq1ov6o0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "5v3aQq3Ysdg",
+      "title": "Poor chaewon #kpop #katseye #triples #Haemivee #trending #fyp",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "𝘏𝘢𝘦𝘮𝘪𝘷𝘦𝘦",
+      "channelId": "UCrwuhGXWNzCrMDvpbSM7duA",
+      "videoUrl": "https://www.youtube.com/watch?v=5v3aQq3Ysdg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "sLk0J5cwzDA",
+      "title": "no words…😭😭#chaewon #triples #pain #health #awareness #katseye #pinkyup #trending #blowup #100kviews",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-16",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "𝐢𝐭𝐱._𝐏𝐄𝐀𝐑𝐋.౨ৎ.⟡˚",
+      "channelId": "UCh2Pdfe5Ciq3kguPKq-Rbjg",
+      "videoUrl": "https://www.youtube.com/watch?v=sLk0J5cwzDA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "yq95TUxMKwM",
+      "title": "위스키와 아이돌 안무는 \"바디감\" 이야! #김채연 #김채원 #트리플에스 #tripleS #ChaeYeon #ChaeWon #채연 #보니하니",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "K-POP 날것이 좋아",
+      "channelId": "UC70Hwe3nc_0I09_hgrYJsSg",
+      "videoUrl": "https://www.youtube.com/watch?v=yq95TUxMKwM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "KFQGysnmj-8",
+      "title": "she needs immediate help.... #fypシ #kpop #darksideofkpop#chaewon #triples",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "@𝙚𝙩𝙝𝙚𝙧𝙚𝙖𝙡_𝙚𝙙𝙞𝙩𝙨𝜗ৎ",
+      "channelId": "UCDerfLYbQ6O0Xv7UEDbhB1w",
+      "videoUrl": "https://www.youtube.com/watch?v=KFQGysnmj-8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "PuKMG8nsfas",
+      "title": "Chaewon reveals her health issue",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripliveS",
+      "channelId": "UC8QMFnv7SclWNm4yXZ4ci-g",
+      "videoUrl": "https://www.youtube.com/watch?v=PuKMG8nsfas",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "D4hG0lwThrA",
+      "title": "They are literally skin and bones #juwang #kickflip #chaewon #triples #kpopfyp #mistreatment #fypシ",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Roses4Skz",
+      "channelId": "UCMiCm0S6zq3ZaPPFWa6r0BA",
+      "videoUrl": "https://www.youtube.com/watch?v=D4hG0lwThrA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "dtNohYtY9-o",
+      "title": "심각하다는 트리플에스 채원 상태",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "발발이",
+      "channelId": "UCKyrJoJnqMB5se-iDzQ9Q9g",
+      "videoUrl": "https://www.youtube.com/watch?v=dtNohYtY9-o",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "LgfhPPwqmNo",
+      "title": "o pior as pessoas romantizando isso | #chaewon #triples #foryou #kpop #viral #viraliza #fyp #funny",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "hyunjin_stayunis",
+      "channelId": "UCsomqYnhZwGsdFJK2xdDlqA",
+      "videoUrl": "https://www.youtube.com/watch?v=LgfhPPwqmNo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "lFwbE3e1Uzc",
+      "title": "#chaewon #triples #fyp #shorts #kpop",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "faewisp",
+      "channelId": "UCpw58UjMbBHKabwJrUF3X_g",
+      "videoUrl": "https://www.youtube.com/watch?v=lFwbE3e1Uzc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "TVKQo7M3yj8",
+      "title": "tripleS 김채원, 뼈말라 종결자 등극 (트리플에스 콘서트)",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "THE IDOL × Nikon",
+      "channelId": "UCe6CdwJAqg7JqYIpos4ZsiA",
+      "videoUrl": "https://www.youtube.com/watch?v=TVKQo7M3yj8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "OUVSsPNWi10",
+      "title": "'Let's talk about it' 트리플에스(tripleS) 김채원 Lit Pop 직캠 @MySecretNewZone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-10",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=OUVSsPNWi10",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "bOd5KbqRqcE",
+      "title": "Nothing But Skin & Bones! Chaewon TripleS Body Condition at Their Latest Concert Makes Fans Worried",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Kpop Fact",
+      "channelId": "UCbY3T1RqE5yhuK9DgO3IKiA",
+      "videoUrl": "https://www.youtube.com/watch?v=bOd5KbqRqcE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "z68bGf8Kpjw",
+      "title": "'우리 그냥 도망치자' 트리플에스(tripleS) 김채원 깨어 직캠 @MySecretNewZone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=z68bGf8Kpjw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "iRxGcWu43gA",
+      "title": "[4K] 260405 트리플에스(tripleS) 김채원 (Kim Chaewon) - Diablo @My Secret New Zone Seoul 직캠(Fancam)",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "토끼야",
+      "channelId": "UCFLhnKakycu7-mkPIA49pAA",
+      "videoUrl": "https://www.youtube.com/watch?v=iRxGcWu43gA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "gkPtPtexLe8",
+      "title": "[4K/ZR] tripleS(트리플에스) 김채원(Kim ChaeWon) 「찰나 (Charla)」 세로 직캠 | 2026 tripleS [My Secret New Zone] Day1",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "THE IDOL × Nikon",
+      "channelId": "UCe6CdwJAqg7JqYIpos4ZsiA",
+      "videoUrl": "https://www.youtube.com/watch?v=gkPtPtexLe8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "E2eMx0gN8NI",
+      "title": "🍓단발머리 잘 어울리는 채원이🍓 @triplescosmos  #chaewon #triples #채원 #트리플에스 #단발머리",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-04-06",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오늘도 채원하다",
+      "channelId": "UC8z7Uev3zvKMT79_c2eOyRA",
+      "videoUrl": "https://www.youtube.com/watch?v=E2eMx0gN8NI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "REOQRtbhZd4",
+      "title": "'우리 말곤 하나둘씩 지워버리자' 트리플에스(tripleS) 김채원 으르렁 직캠 @MySecretNewZone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-05",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=REOQRtbhZd4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "1td-lldjfX0",
+      "title": "260404 트리플에스(tripleS) 김채원(Chaewon) - 'Lit Pop' 직캠 Fancam @My Secret New Zone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-04-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "비니콩",
+      "channelId": "UCvyOcYaBbfYha2oKSnpxtUw",
+      "videoUrl": "https://www.youtube.com/watch?v=1td-lldjfX0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ARfwk_c_QUw",
+      "title": "너무 말라서 건강 염려중인 여돌",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-03-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "해달특파원",
+      "channelId": "UC5EvMz_XliMULpqQHkjnzgQ",
+      "videoUrl": "https://www.youtube.com/watch?v=ARfwk_c_QUw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "BJ-b61ThGBw",
+      "title": "260301 트리플에스 김채원 Lit Pop 직캠 My Secret New Zone in Taipei Day2",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-16",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=BJ-b61ThGBw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ck41CSSCXIM",
+      "title": "260301귀여운 하트~ 트리플에스 김채원 tripleS ChaeWon | My Secret New Zone in Taipei",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-03-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Sukiyaki",
+      "channelId": "UCIDpWhTZbWXiadXnZbDCqPQ",
+      "videoUrl": "https://www.youtube.com/watch?v=ck41CSSCXIM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "C-RJyG_vAFE",
+      "title": "[4k] 260301 트리플에스 － 김채원 '찰나 (Charla)' 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "chaechaeouo",
+      "channelId": "UCkjZcH0anlC1wzbjpWnm3rw",
+      "videoUrl": "https://www.youtube.com/watch?v=C-RJyG_vAFE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "7morWHJZ_K0",
+      "title": "260228 트리플에스 채원 직캠 찰나(charla) 타이베이 1일차 - My Secret New Zone",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=7morWHJZ_K0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Kct9KtoQmzo",
+      "title": "260228 트리플에스 버블검걸 채원 직캠 타이베이 1일차",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-05",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "StrawberryOrbit",
+      "channelId": "UCK-zqsZ8_yZjIJUYSNd3xwg",
+      "videoUrl": "https://www.youtube.com/watch?v=Kct9KtoQmzo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "30-7Ykgt-Pc",
+      "title": "Viral Clip Of tripleS Chaewon Sparks Major Health Concerns",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-03-05",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Pinksoz",
+      "channelId": "UCDnhouN0mLPBBV8LwZHc3Aw",
+      "videoUrl": "https://www.youtube.com/watch?v=30-7Ykgt-Pc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "P2Lfujc6MMw",
+      "title": "tripleS ChaeWon - Bubble Gum Girl 260301",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-03-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "chaechaeouo",
+      "channelId": "UCkjZcH0anlC1wzbjpWnm3rw",
+      "videoUrl": "https://www.youtube.com/watch?v=P2Lfujc6MMw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ZquDG3KXRYM",
+      "title": "[4K] 트리플에스 tripleS - 'Lit Pop' 「 채원 직캠 Chaewon Stage Mix Fancam 」 @ My Secret New Zone Taipei D1&D2",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Kioku",
+      "channelId": "UCrSjCIwZB6yHgQnFt7ZyeIA",
+      "videoUrl": "https://www.youtube.com/watch?v=ZquDG3KXRYM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "q8Kvjkr-_II",
+      "title": "260301 tripleS 트리플에스 CONCERT 《My Secret New Zone 》 in Taipei -\"Charla \" ChaeWon fancam  채원 직캠",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-02",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "YT L",
+      "channelId": "UCbRr3AWZ95epNYNfTSD4DWA",
+      "videoUrl": "https://www.youtube.com/watch?v=q8Kvjkr-_II",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "mYjiiy3NSos",
+      "title": "260228 tripleS 트리플에스 ChaeWon 채원 Fancam @OT24 Concert [My Secret New Zone] in Taipei",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2026-03-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "K-POP守護者",
+      "channelId": "UCa24tzg7Q3vm8AR22u4O0Fg",
+      "videoUrl": "https://www.youtube.com/watch?v=mYjiiy3NSos",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "YXKXUFa7wOs",
+      "title": "[트리플에스]세상에서 제일 웃긴 단어 “갸루”",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-02-23",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "대한코코볼",
+      "channelId": "UC0TKJhCHfNjU8fsdXWbUQVw",
+      "videoUrl": "https://www.youtube.com/watch?v=YXKXUFa7wOs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Venl26fVWXY",
+      "title": "아니 채원아ㅋㅋㅋㅋ 왜 이렇게 잘해  #tripleS #트리플에스 #トリプルS #HaYeon #하연 #ハヨン #ChaeWon #채원 #チェウォン",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2026-01-28",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "주주",
+      "channelId": "UC5CR5fN2QtsKMnGXqr0UgVA",
+      "videoUrl": "https://www.youtube.com/watch?v=Venl26fVWXY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "sfiDp07rPTM",
+      "title": "250822 tripleS 팬싸인회 김채원 깨어 (Are You Alive) 직캠 Fancam (4K)",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Rospi",
+      "channelId": "UC7dAf1YswS21GVZrMxCIrWA",
+      "videoUrl": "https://www.youtube.com/watch?v=sfiDp07rPTM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "S3HlB_xGtR4",
+      "title": "김채원 4차원 모음",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-12-28",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "트리플미소",
+      "channelId": "UCzHA2dpbqieDFbDM98x_4MA",
+      "videoUrl": "https://www.youtube.com/watch?v=S3HlB_xGtR4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "rZz79w90DJE",
+      "title": "진짜 관심 없는 거 확실해? #tripleS #트리플에스 #JiWoo #지우 #ジウ #YuBin #유빈 #ユビン #HaYeon #하연 #ハヨン #ChaeWon #채원 #チェウォン",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-12-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=rZz79w90DJE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "_x88XanuR04",
+      "title": "[얼빡직캠 4K] 트리플에스 김채원 '으르렁 (Growl)' (tripleS Kim ChaeWon Facecam) @가요대축제 글로벌페스티벌 251219",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "KBS Kpop",
+      "channelId": "UCeLPm9yH_a_QH8n6445G-Ow",
+      "videoUrl": "https://www.youtube.com/watch?v=_x88XanuR04",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "HnnM7ygrH4E",
+      "title": "[트리플에스] 김채원) 채원이는 늘 쌍절곤을 해줬어",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-12-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "단풍유연",
+      "channelId": "UCcBAVgW8ywTqWZr5cNInstw",
+      "videoUrl": "https://www.youtube.com/watch?v=HnnM7ygrH4E",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "NOp56YGcLIE",
+      "title": "[4k] tripleS msnz sun Kim ChaeWon 트리플에스 미소녀즈 선 김채원 직캠 -  Bubble Gum Girl | FaceCam MBC251206",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "tripliveS",
+      "channelId": "UC8QMFnv7SclWNm4yXZ4ci-g",
+      "videoUrl": "https://www.youtube.com/watch?v=NOp56YGcLIE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "rH6vR6SJV1c",
+      "title": "『언ㄴi가。잘할게..♡』 #tripleS #트리플에스 #トリプルS #トリプルエス #トエス #tripleS_msnz #Beyond_Beauty #ChaeWon #채원 #チェウォン",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-12-11",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=rH6vR6SJV1c",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "5UXAUqMDDVs",
+      "title": "꼴보기가 싫어~ .. 트리플에스 김채원 정하연 ❘ tripleS msnz (미소녀즈) ❘ Signal Live 251209",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2025-12-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=5UXAUqMDDVs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "sDeq_Zh7tFg",
+      "title": "[SONG] 好きだから(Sukidakara) by 채원(ChaeWon)",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-12-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=sDeq_Zh7tFg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "7MnKz6YEXPQ",
+      "title": "[#음중직캠] tripleS msnz sun KIM CHAEWON (트리플에스 선 김채원) – Bubble Gum Girl FanCam | 쇼! 음악중심 | MBC251206",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-06",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "MBCkpop",
+      "channelId": "UCe52oeb7Xv_KaJsEzcKXJJg",
+      "videoUrl": "https://www.youtube.com/watch?v=7MnKz6YEXPQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ba5vhDEfyPI",
+      "title": "4K60 251130 tripleS 트리플에스 CHAEWON 채원 Password Fancam 직캠 @ SUGO 50th Anniversary",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "coldnadongie",
+      "channelId": "UCpumDV55_fUe14Obzez6PYg",
+      "videoUrl": "https://www.youtube.com/watch?v=ba5vhDEfyPI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "37iyk-Ugo0c",
+      "title": "어느 날 예쁜 애가 전학왔다 | tripleS msnz | 김수민 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-12-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오늘의SSS",
+      "channelId": "UC9EZR9zqokxwUG96VFGAu0Q",
+      "videoUrl": "https://www.youtube.com/watch?v=37iyk-Ugo0c",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "bnsOb4QvNIo",
+      "title": "4K60 251201 tripleS 트리플에스 CHAEWON 채원 Are You Alive 깨어 Fancam 직캠 @ 放課後ロッケンロール-HYPER- 2025",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "coldnadongie",
+      "channelId": "UCpumDV55_fUe14Obzez6PYg",
+      "videoUrl": "https://www.youtube.com/watch?v=bnsOb4QvNIo",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Nj1Q1i7QRLc",
+      "title": "4K60 251201 tripleS 트리플에스 CHAEWON 채원 Girls Never Die Fancam 직캠 @ 放課後ロッケンロール-HYPER- 2025",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-12-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "coldnadongie",
+      "channelId": "UCpumDV55_fUe14Obzez6PYg",
+      "videoUrl": "https://www.youtube.com/watch?v=Nj1Q1i7QRLc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
     },
     {
       "youtubeId": "LfS0-022cq8",
@@ -55,10 +2783,937 @@
       "verified": true
     },
     {
-      "youtubeId": "YsGezcaTqh8",
-      "title": "채원 공주님 생일 축하하거라 | tripleS : SIGNAL LIVE 260502",
+      "youtubeId": "emc3fv0-bq4",
+      "title": "새로 발급받은 민증 사진 공개! .. 트리플에스 김채원 ❘ tripleS(トリプルS) ∞! (트리플에스 핫찌) | SIGNAL 251031",
       "category": "signal",
-      "publishedAt": "2026-05-02",
+      "subCategory": "signal",
+      "publishedAt": "2025-10-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "찰나의채원: 왹(WÆK)™",
+      "channelId": "UCpAket7oBy6IBA2fKLP5Kng",
+      "videoUrl": "https://www.youtube.com/watch?v=emc3fv0-bq4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "V5PslR0cCBY",
+      "title": "[ENG SUB] 251030 tripleS's Chaewon 14th Cosmo Live",
+      "category": "live",
+      "subCategory": "live",
+      "publishedAt": "2025-10-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Parrotsub",
+      "channelId": "UCRON1rHVJtyLBEBy146TDnw",
+      "videoUrl": "https://www.youtube.com/watch?v=V5PslR0cCBY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "yeErXB_kavM",
+      "title": "'You Just Follow' 트리플에스(tripleS) 김채원 Rising 직캠 @AlphaPercent",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-10-14",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=yeErXB_kavM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "5vpNxr9WlR8",
+      "title": "\"안더워요 웨이브?\" 트리플에스(tripleS) 김채원 직캠 @AlphaPercent",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-10-14",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=5vpNxr9WlR8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "XqGiZT-C1ss",
+      "title": "2번 봐야 보이는 김채원의 기습 뽀뽀 #트리플에스 #김채원 #니엔",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-10-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Ksh Cam",
+      "channelId": "UCEYP1cvs-MJxXezilGQjZzg",
+      "videoUrl": "https://www.youtube.com/watch?v=XqGiZT-C1ss",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "XRApx-RPLBE",
+      "title": "눈앞에 트리플에스(tripleS) 김채원 심멎 직캠 @AlphaPercent",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-10-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=XRApx-RPLBE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "UpbU7HBssLs",
+      "title": "트리플에스(tripleS) 김채원 - '스트로베리~ 프린세스' 직캠 @AlphaPercent",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-10-12",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "펌킨이야",
+      "channelId": "UCUKhv-jyReqchkSOKm45RQA",
+      "videoUrl": "https://www.youtube.com/watch?v=UpbU7HBssLs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Upjn02CtCV4",
+      "title": "CHAEWON CARTWHEEL #triples #트리플에스 #ChaeWon #vancouver",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-09-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Ketchup",
+      "channelId": "UC1-IFyEUtkE2UrLzIx12zCw",
+      "videoUrl": "https://www.youtube.com/watch?v=Upjn02CtCV4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "YPJx2L7O45Q",
+      "title": "트리플에스 김채원의 쌍절곤 시범",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-09-06",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "투데이픽잇",
+      "channelId": "UCBc2oHoP6-XeqOcVVpd2KgA",
+      "videoUrl": "https://www.youtube.com/watch?v=YPJx2L7O45Q",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "tyMpUAdZ-JQ",
+      "title": "눈썹 칼로 머리 자른 썰 #triples #트리플에스 #채원 #Chaewon",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-08-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "햄햄S",
+      "channelId": "UCvLs4xV4hvBGv_UPcYLjtSg",
+      "videoUrl": "https://www.youtube.com/watch?v=tyMpUAdZ-JQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "VE1lOOl_NBk",
+      "title": "트리플에스 (tripleS) 김채원 (Chaewon) RISING (라이징) [4K60P] 250820 울산 세계명문대학 조정 페스티벌 직캠 by ECU",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-08-21",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=VE1lOOl_NBk",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "LcyL5slLKsU",
+      "title": "250820 트리플에스 (tripleS) 김채원 (KimChaewon) - Girls Never Die @울산 조정페스티벌 직캠(Fancam).by.Shaytyen",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-08-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Shaytyen",
+      "channelId": "UCCjHxNtBhAU37hL-Tzn_UDQ",
+      "videoUrl": "https://www.youtube.com/watch?v=LcyL5slLKsU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Aa99hqd_qW4",
+      "title": "[4k] tripleS - 깨어(are you alive?) 채원직캠│250809 보령머드축제 KPOP SUPER LIVE",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-08-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "탐정단_fancam",
+      "channelId": "UC1rOT3z-8HaSUw3JDC2au6g",
+      "videoUrl": "https://www.youtube.com/watch?v=Aa99hqd_qW4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "RHRMlHufkBA",
+      "title": "전학온 날 예뻐서 소문났다는 한림예고 편입생 트리플에스 김채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-07-18",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "딸기농장주🍓",
+      "channelId": "UCa6hEmTY5VDZcYyktH_x-Zg",
+      "videoUrl": "https://www.youtube.com/watch?v=RHRMlHufkBA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "vrytNz2E2bY",
+      "title": "[4K] 250712 tripleS A LIVE 25 in Seoul 김채원 KimChaeWon - Supersonic (fromis_9) focus fancam",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-07-14",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Daystar",
+      "channelId": "UCav4g6iWp7j3OOivyO7A3fA",
+      "videoUrl": "https://www.youtube.com/watch?v=vrytNz2E2bY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "sxewXvM7BDg",
+      "title": "《트리플에스》 채원이의 멀티뽀뽀골",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-06-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "트에왔토네",
+      "channelId": "UCYKpRG5zT8h-6B-k09z-X_A",
+      "videoUrl": "https://www.youtube.com/watch?v=sxewXvM7BDg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "pqVMMBQ-oMk",
+      "title": "triple PONYTAIL 등장🎀🤍✨ #tripleS #트리플에스#ASSEMBLE25 #깨어 #JooBin #주빈 #ChaeWon #채원#JiYeon #지연",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-06-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=pqVMMBQ-oMk",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "CoZ2QA6B1eI",
+      "title": "[안방1열 직캠4K] 트리플에스 김채원 '깨어' (tripleS Kim ChaeWon 'Are You Alive' FanCam) @SBS Inkigayo 250525",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-05-27",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "SBSKPOP ZOOM",
+      "channelId": "UCM3jwNRfl5-W8VzgT6DsaEQ",
+      "videoUrl": "https://www.youtube.com/watch?v=CoZ2QA6B1eI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ZADjtmOKwT4",
+      "title": "추리소설 (Detective Soseol) | tripleS | 김채원 파트 모음",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-05-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "오늘의SSS",
+      "channelId": "UC9EZR9zqokxwUG96VFGAu0Q",
+      "videoUrl": "https://www.youtube.com/watch?v=ZADjtmOKwT4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "U2_OX2ZLBhc",
+      "title": "앞으로 조심할'깨어' 🙏 #tripleS #트리플에스 #ASSEMBLE25 #깨어 #Are_You_Alive #SeoYeon #서연 #ChaeWon #채원",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-05-23",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=U2_OX2ZLBhc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "KRzdERHJYPk",
+      "title": "[트리플에스] 채원이가 일본인?!",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-05-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "신위는못말려",
+      "channelId": "UC9lmeidZz7x9NlMP-R8mGvg",
+      "videoUrl": "https://www.youtube.com/watch?v=KRzdERHJYPk",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "t4Pf8lNIor0",
+      "title": "트리플에스 (tripleS) 김채원 (Chaewon) Non Scale [4K60P] 250419 하동 차문화대축전 직캠 by ECU",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-04-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=t4Pf8lNIor0",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "6AjhzjIVjXI",
+      "title": "[트리플에스] 김채원) 휴게소 간식이 채원이를 춤추게 해",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-03-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "단풍유연",
+      "channelId": "UCcBAVgW8ywTqWZr5cNInstw",
+      "videoUrl": "https://www.youtube.com/watch?v=6AjhzjIVjXI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "Uc7TK6qKyRg",
+      "title": "250224 트리플에스 tripleS - Girls Never Die | Kim ChaeWon 김채원 S21 세로 직캠 | 구미대학교 오리엔테이션 [KPOP FanCam 4K]",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2025-02-25",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Bamp VIDEO 8K",
+      "channelId": "UCkVbWLs60QaCIGPw61KBHeA",
+      "videoUrl": "https://www.youtube.com/watch?v=Uc7TK6qKyRg",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "hpaAGcHKeMc",
+      "title": "김채원은 얼굴vs몸매 ?! 👇#김채원 #트리플에스 #kimchaewon #triples",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2025-01-07",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "BLC_PINK_",
+      "channelId": "UCZMTa8mSnNor7puiMakuAxA",
+      "videoUrl": "https://www.youtube.com/watch?v=hpaAGcHKeMc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "w5zIHU0Eq7E",
+      "title": "가요대축제에 trouble maker🚨 모찌즈의 등장이라… #tripleS #트리플에스 #トリプルS #HaYeon #하연 #ハヨン #ChaeWon #채원 #チェウォン",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-12-28",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=w5zIHU0Eq7E",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ZN6HhrHT2Ns",
+      "title": "[4K] 241220 tripleS 트리플에스 가요대축제 글로벌 페스티벌 김채원 KimChaeWon - 초련(初戀) focus fancam",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2024-12-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "Daystar",
+      "channelId": "UCav4g6iWp7j3OOivyO7A3fA",
+      "videoUrl": "https://www.youtube.com/watch?v=ZN6HhrHT2Ns",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "geqSefoCLsA",
+      "title": "설린이는 되고파 채원이의 오빠…💋#tripleS #트리플에스 #トリプルS #トリプルエス #トエス #ChaeWon #채원 #チェウォン #Sullin #설린 #ソルリン",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-11-14",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=geqSefoCLsA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "uPIKTjlVtgM",
+      "title": "나야 채원이가 만든 딸기 케이크🎂 | EN JP CN | SIGNAL 241004",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-10-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=uPIKTjlVtgM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "2tQtv4rEJAY",
+      "title": "트리플에스 채원이만의 독특하고 귀여운 퇴장 인사 방식, 짬푸~ #채원 #트리플에스 #tripleS",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-09-30",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Cam ECU",
+      "channelId": "UCY6c9RR4WF5UYs9PueB-VuA",
+      "videoUrl": "https://www.youtube.com/watch?v=2tQtv4rEJAY",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "kkDGmwLqBBM",
+      "title": "채원이 손 잡고 위치 잡아주는 하연이🥰 #트리플에스 #tripleS #Rising #4K",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-09-29",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "smile -wA-",
+      "channelId": "UCxv6SRNqPZfgwgPNomcPetg",
+      "videoUrl": "https://www.youtube.com/watch?v=kkDGmwLqBBM",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "N-_kMepe_JA",
+      "title": "트리플에스 딸기 공주 #김채원 #tripleS #Rising #직캠 #4K",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2024-09-29",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "smile -wA-",
+      "channelId": "UCxv6SRNqPZfgwgPNomcPetg",
+      "videoUrl": "https://www.youtube.com/watch?v=N-_kMepe_JA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "5v5SvHXxERw",
+      "title": "[트리플에스] 까마귀가 채원이를 물어갈지도 몰라요",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-08-15",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "시온씨",
+      "channelId": "UCiyNh1uSkdkpb6nZSbjNxFQ",
+      "videoUrl": "https://www.youtube.com/watch?v=5v5SvHXxERw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "u8PAtMlN3mw",
+      "title": "장원영이 돼버린 김채원..?",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-08-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "숏차장",
+      "channelId": "UC6QBCXjh1p3_etFuS4FST5A",
+      "videoUrl": "https://www.youtube.com/watch?v=u8PAtMlN3mw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "xCdqX3OAbko",
+      "title": "할때 확실히 하는 트리플에스 채원 #shorts",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-08-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "엔터잇슈",
+      "channelId": "UCO4U2_6bA5n_imzqRo9RTzw",
+      "videoUrl": "https://www.youtube.com/watch?v=xCdqX3OAbko",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "jdzLHtYbKLc",
+      "title": "최고의 SIGNAL 송을 찾아라‼️#tripleS #트리플에스 #トリプルS #JiWoo #지우 #SooMin #수민 #Kotone #코토네 #Nien #니엔 #ChaeWon #채원",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-07-31",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=jdzLHtYbKLc",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "AgBMTMGYUr8",
+      "title": "240727 김채원 KimChaeWon 트리플에스 tripleS '제네레이션+Girls’ Capitalism+인빈시블+논스케일+라이징+걸스네버다이' 4K 60P 직캠 @장흥물축제",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2024-07-27",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "DaftTaengk",
+      "channelId": "UCrTCkJ8377E7JhsMeyLXtKA",
+      "videoUrl": "https://www.youtube.com/watch?v=AgBMTMGYUr8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "kNQoGa4H-q8",
+      "title": "트리플에스 tripleS Colorful 김채원 직캠 Fancam #triples",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2024-07-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "KPOPBBOOM",
+      "channelId": "UCqxX7dnuqHmue0c--jRtxxg",
+      "videoUrl": "https://www.youtube.com/watch?v=kNQoGa4H-q8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "TUJVcdvgBgA",
+      "title": "서연이 채연이가 너무 예쁨 ⬅️ FACT | EN JP CN | SIGNAL 240720",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-07-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=TUJVcdvgBgA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "ON6-ezl1038",
+      "title": "TRIPLE S CHAEWON HAS BRUCE LEE NUNCHAKU SKILLS #chaewon #triples",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-07-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Kpop Angels",
+      "channelId": "UCkVjFN1tcILh_itSgS0cRYw",
+      "videoUrl": "https://www.youtube.com/watch?v=ON6-ezl1038",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "6Au8gpYowYU",
+      "title": "채원이를 사랑했나봐...❤ #tripleS #트리플에스 #トリプルS #채원 #ChaeWon",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-07-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=6Au8gpYowYU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "eXGfzkxBp5M",
+      "title": "07즈 귀요미들 민증 사진 찍은 날! | EN JP CN | SIGNAL 240701",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-07-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=eXGfzkxBp5M",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "viHvll1sPhQ",
+      "title": "24명이 전부 귀여워… 이게 에버랜드 효과??? | EN JP CN | SIGNAL 240629",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-06-29",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=viHvll1sPhQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "9bfWvaQskLU",
+      "title": "tripleS Glow '내적 댄스 (Inner Dance)' Official Performance",
+      "category": "performance",
+      "publishedAt": "2024-06-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "Glow",
+      "scope": "unit",
+      "source": "tripleS official",
+      "verified": true
+    },
+    {
+      "youtubeId": "SizcTrdCzi8",
+      "title": "[쇼챔직캠 4K] tripleS Kim ChaeWon(트리플에스 김채원) - Girls Never Die | Show Champion | EP.518 | 240522",
+      "category": "performance",
+      "subCategory": "fancam",
+      "publishedAt": "2024-05-22",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "solo",
+      "source": "ALL THE K-POP",
+      "channelId": "UCPde4guD9yFBRzkxk2PatoA",
+      "videoUrl": "https://www.youtube.com/watch?v=SizcTrdCzi8",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "De9TRo4c4Xk",
+      "title": "배지 전쟁 완전판! tripleS도 빨리 보고 싶다! | EN JP CN | SIGNAL 240520",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-05-20",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=De9TRo4c4Xk",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "v6GCj8U_EiI",
+      "title": "채원이 쌍절곤 아뵤 #트리플에스 #triples #김채원 #s21",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-05-19",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "나왔서연",
+      "channelId": "UCw-_OeElemkwFGRneIV4GOA",
+      "videoUrl": "https://www.youtube.com/watch?v=v6GCj8U_EiI",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "g-Z66IALvqw",
+      "title": "트리플에스 일일 팬매 미소가 귀여운 채원이 연지 #김채원 #곽연지 #트리플에스 #triples",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-05-17",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "Cloud blue",
+      "channelId": "UCwkP0Yh434hk_zeyT2B_YCQ",
+      "videoUrl": "https://www.youtube.com/watch?v=g-Z66IALvqw",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "l3q5Y_ZPRGU",
+      "title": "tripleS S21 채원이의 Girls never die 챌린지(240508 ASSEMBLE24 쇼케이스)",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-05-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "탐정단_fancam",
+      "channelId": "UC1rOT3z-8HaSUw3JDC2au6g",
+      "videoUrl": "https://www.youtube.com/watch?v=l3q5Y_ZPRGU",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "2tda_TCjz8w",
+      "title": "tripleS 'Girls Never Die' Official MV",
+      "category": "music",
+      "publishedAt": "2024-05-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "group",
+      "source": "tripleS official",
+      "verified": true
+    },
+    {
+      "youtubeId": "AKbVONU-peQ",
+      "title": "눈물의 시리얼 쟁탈전 🥣🤺 #tripleS #트리플에스 #채원 #ChaeWon #서아 #SeoAh",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-05-03",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=AKbVONU-peQ",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "HNweRmGyTqs",
+      "title": "GLOW처럼 빛나는 채원이의 생일 | EN JP CN | SIGNAL 240502",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-05-02",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=HNweRmGyTqs",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "rP28ue_4mD4",
+      "title": "한강 Haus(?)로 입주한 07 채원이 | EN JP CN｜SIGNAL 240409",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-04-09",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=rP28ue_4mD4",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "CE5OPiXYSSE",
+      "title": "tripleS 완전체 Assemble | EN JP CN | SIGNAL 240404",
+      "category": "signal",
+      "subCategory": "signal",
+      "publishedAt": "2024-04-04",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=CE5OPiXYSSE",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "fT9OBrVP7NA",
+      "title": "S21 김채원의 놀라운 반전 매력 😳 #tripleS #트리플에스 #채원 #ChaeWon",
+      "category": "other",
+      "subCategory": "official-or-other",
+      "publishedAt": "2024-04-02",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "unknown",
+      "source": "tripleS official",
+      "channelId": "UCJnL-TBcsYrF2SLs7tmiC8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=fT9OBrVP7NA",
+      "verified": false,
+      "note": "YouTube 검색 메타데이터 일치 · 실제 김채원 출연 여부 미검증 (원본 영상은 YouTube에서 재생)"
+    },
+    {
+      "youtubeId": "BqtKrYKOPd4",
+      "title": "tripleS 트리플에스 : KimChaeWon.SSS",
+      "category": "other",
+      "publishedAt": "2024-04-01",
       "memberIds": [
         "S21"
       ],
