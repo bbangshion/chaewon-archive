@@ -1,0 +1,277 @@
+name: CHAEWON - Fine Polish C Logo and Mobile
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chaewon-polish-source
+  cancel-in-progress: false
+
+jobs:
+  polish:
+    if: github.repository == 'bbangshion/chaewon-archive' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate and apply careful S21 UI patch
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          #!/usr/bin/env python3
+          """Idempotent, non-destructive fine polish for bbangshion/chaewon-archive.
+          Never edits public/data, photographs, Objekt catalogue or video records.
+          """
+          from __future__ import annotations
+          import json
+          from pathlib import Path
+          import re
+          
+          ROOT = Path.cwd()
+          APP = ROOT / 'src/App.tsx'
+          MAIN = ROOT / 'src/main.tsx'
+          INDEX = ROOT / 'index.html'
+          if not all(p.is_file() for p in [APP, MAIN, INDEX]):
+              raise SystemExit('STOP: expected React/Vite CHAEWON files missing; no changes made')
+          
+          original_app = APP.read_text(encoding='utf-8')
+          # Do not depend on app branding already being correct: some old S12/S20 copies exist.
+          if 'shion-brand-mark' not in original_app or 'shion-brand-name' not in original_app:
+              raise SystemExit('STOP: header structure changed; avoiding speculative edits')
+          
+          # Single-character logo; replace the displayed monogram only, not every Y in source/data.
+          logo_pattern = re.compile(r'(<span\b[^>]*\bclassName=["\']shion-brand-mark["\'][^>]*>)(\s*[A-Za-z]\s*)(</span>)')
+          found = list(logo_pattern.finditer(original_app))
+          if len(found) != 1:
+              raise SystemExit(f'STOP: found {len(found)} header monograms, expected exactly one')
+          logo_was = found[0].group(2).strip()
+          if logo_was not in ('Y', 'C', 'S'):
+              raise SystemExit('STOP: unexpected logo character; reviewing it manually is safer')
+          updated_app = logo_pattern.sub(lambda m: m.group(1) + 'C' + m.group(3), original_app, count=1)
+          
+          # Brand correction only in header and footer/navigation chrome.
+          # Avoid global substitutions that could corrupt archived source quotes/data.
+          for start_marker, end_marker in [
+              ('function SiteHeader()', 'function Home()'),
+              ('<footer className="shion-footer"', '</footer>'),
+          ]:
+              i = updated_app.find(start_marker)
+              if i < 0:
+                  continue
+              j = updated_app.find(end_marker, i+len(start_marker))
+              if j < 0:
+                  continue
+              j += len(end_marker) if start_marker.startswith('<footer') else 0
+              section = updated_app[i:j]
+              # Old project copies in site chrome ONLY.
+              for a,b in [('YEONJI ARCHIVE','CHAEWON ARCHIVE'),('SHION ARCHIVE','CHAEWON ARCHIVE'),
+                          ('TRIPLES S12','TRIPLES S21'),('TRIPLES S20','TRIPLES S21'),
+                          ('tripleS S12 곽연지 팬 아카이브','tripleS S21 김채원 팬 아카이브'),
+                          ('tripleS S20 박시온 팬 아카이브','tripleS S21 김채원 팬 아카이브'),
+                          ('tripleS 곽연지 팬 아카이브','tripleS 김채원 팬 아카이브'),
+                          ('tripleS 박시온 팬 아카이브','tripleS 김채원 팬 아카이브')]:
+                  section = section.replace(a,b)
+              updated_app = updated_app[:i]+section+updated_app[j:]
+          # Desktop logo and accessible home link are scoped and can be safely matched.
+          for a,b in [('aria-label={t("YEONJI ARCHIVE 홈으로")}', 'aria-label={t("CHAEWON ARCHIVE 홈으로")}'),
+                      ('aria-label={t("SHION ARCHIVE 홈으로")}', 'aria-label={t("CHAEWON ARCHIVE 홈으로")}')]:
+              updated_app = updated_app.replace(a,b)
+          if 'className="shion-brand-mark"' not in updated_app:
+              raise SystemExit('STOP: branded header unexpectedly disappeared')
+          
+          # Corrected metadata without touching verification tags, tracking, app credentials.
+          html = INDEX.read_text(encoding='utf-8')
+          html, n = re.subn(r'(?is)<title>.*?</title>',
+                            '<title>CHAEWON ARCHIVE | tripleS S21 김채원</title>', html, count=1)
+          if n != 1:
+              raise SystemExit('STOP: expected a single index.html title')
+          
+          def meta_tag_update(document, attribute, key, content):
+              tag_re = re.compile(r'(?is)<meta\s+[^>]*>')
+              found = [m for m in tag_re.finditer(document) if re.search(r'\b'+re.escape(attribute)+r'\s*=\s*["\']'+re.escape(key)+r'["\']', m.group(0), flags=re.I)]
+              if len(found) > 1:
+                  raise SystemExit(f'STOP: duplicate metadata tags: {attribute}={key}')
+              if found:
+                  m = found[0]
+                  tag = m.group(0)
+                  if re.search(r'\bcontent\s*=\s*["\'][^"\']*["\']',tag,flags=re.I):
+                      tag = re.sub(r'\bcontent\s*=\s*["\'][^"\']*["\']',f'content="{content}"',tag,count=1,flags=re.I)
+                  else:
+                      tag = tag[:-1]+f' content="{content}">'
+                  return document[:m.start()] + tag + document[m.end():]
+              if '</head>' not in document:
+                  raise SystemExit('STOP: no </head> in HTML')
+              return document.replace('</head>',f'  <meta {attribute}="{key}" content="{content}" />\n  </head>',1)
+          
+          desc = 'tripleS S21 김채원 팬 아카이브 · PHOTO, FILM, PROFILE, TIMELINE, OBJEKT, WORLD CUP'
+          for attr,key,value in [
+              ('name','description',desc),
+              ('property','og:title','CHAEWON ARCHIVE | 김채원 팬 아카이브'),
+              ('property','og:description','tripleS S21 김채원 · 사진, 영상, 오브젝트와 활동 기록'),
+              ('property','og:url','https://bbangshion.github.io/chaewon-archive/'),
+              ('name','twitter:title','CHAEWON ARCHIVE | tripleS S21 김채원'),
+              ('name','twitter:description',desc),
+          ]:
+              html = meta_tag_update(html,attr,key,value)
+          hero = ROOT/'public/images/chaewon-home.jpg'
+          if hero.is_file():
+              html = meta_tag_update(html,'property','og:image','https://bbangshion.github.io/chaewon-archive/images/chaewon-home.jpg')
+              html = meta_tag_update(html,'name','twitter:image','https://bbangshion.github.io/chaewon-archive/images/chaewon-home.jpg')
+          else:
+              # Do not continue publishing the wrong member's S12/S20 OG image.
+              html = re.sub(r'(?is)<meta\b[^>]*\bproperty=["\']og:image["\'][^>]*>', '', html)
+          
+          # Use a local, lightweight self-drawn C monogram. No external font/image request.
+          icon = ROOT/'public/chaewon-mark.svg'
+          icon.parent.mkdir(parents=True,exist_ok=True)
+          icon_text = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="C">
+            <rect width="64" height="64" rx="16" fill="#130f1a"/>
+            <circle cx="32" cy="32" r="24.5" fill="none" stroke="#c7a3df" stroke-width="1.5"/>
+            <text x="32" y="44" fill="#e8d9f2" font-family="Georgia,serif" font-size="40" text-anchor="middle">C</text>
+          </svg>
+          '''
+          if not re.search(r'(?is)<link\b[^>]*\brel=["\']canonical["\']',html):
+              html = html.replace('</head>', '  <link rel="canonical" href="https://bbangshion.github.io/chaewon-archive/" />\n</head>',1)
+          else:
+              html = re.sub(r'(?is)<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*>',
+                            '<link rel="canonical" href="https://bbangshion.github.io/chaewon-archive/" />',html,count=1)
+          
+          
+          # Replace other favicon links so mobile tabs do not retain a Y icon.
+          html = re.sub(r'(?im)^[ \t]*<link\b(?=[^>]*\brel\s*=\s*["\'](?:shortcut\s+)?icon["\'])[^>]*>[ \t]*(?:\r?\n)?','',html)
+          if '</head>' not in html:
+              raise SystemExit('STOP: HTML head missing after edit')
+          html = html.replace('</head>', '  <link rel="icon" type="image/svg+xml" href="%BASE_URL%chaewon-mark.svg" />\n</head>', 1)
+          
+          # A small, isolated CSS layer; do not rewrite megabyte-scale image datasets.
+          css = ROOT/'src/chaewon-fine-polish.css'
+          css_text = '''/* CHAEWON S21 / precise small-screen polish; non-intrusive and reversible. */
+          .shion-brand-mark {
+            flex: 0 0 auto;
+            color: #dbc3ed;
+            border-color: rgba(205,171,229,.75);
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+            letter-spacing: -.045em;
+            font-variant-numeric: lining-nums;
+          }
+          .shion-brand { min-height: 44px; touch-action: manipulation; }
+          .shion-menu-toggle { min-height: 44px; min-width: 44px; touch-action: manipulation; }
+          /* Reserve image boxes before lazy images decode; avoid flicker and CLS. */
+          .cw-featured-visual, .cw-film-poster, .shion-gallery-image { overflow: hidden; }
+          .cw-featured-visual img, .cw-film-poster img, .shion-gallery-image img {
+            display: block; width: 100%; height: 100%;
+          }
+          /* Touch targets in video cards and modals. */
+          .cw-film-fav { min-width: 44px; min-height: 44px; }
+          .cw-film-modal-head button { min-width: 44px; min-height: 44px; }
+          .cw-film-modal { overscroll-behavior: contain; }
+          .shion-site-header :is(a,button):focus-visible,
+          .cw-film-card :is(a,button):focus-visible { outline: 2px solid #c7a3df; outline-offset: 3px; }
+          @media (hover: none) {
+            .cw-featured-tile:hover .cw-featured-visual img,
+            .cw-film-open:hover img { transform: none; }
+          }
+          @media (max-width: 600px) {
+            .shion-header-inner { gap: 8px; }
+            .shion-brand { gap: 9px; flex: 1 1 auto; overflow: hidden; }
+            .shion-brand-name {
+              min-width: 0; overflow: hidden; text-overflow: ellipsis;
+              white-space: nowrap; font-size: clamp(10px, 2.8vw, 12px); letter-spacing: .095em;
+            }
+            .shion-brand-mark { width: 34px; height: 34px; font-size: 23px; }
+            .shion-header-right { gap: 7px; flex: 0 0 auto; }
+            .shion-header-tag { display: none; }
+            .cw-film-grid, .shion-photo-grid { min-width: 0; }
+            .cw-film-modal { max-height: calc(100dvh - 16px); }
+          }
+          @media (max-width: 360px) {
+            .shion-header-inner { width: calc(100% - 20px); }
+            .shion-brand-name { font-size: 10px; letter-spacing: .06em; }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .cw-film-poster img, .cw-featured-visual img { transition: none !important; transform: none !important; }
+          }
+          '''
+          
+          # Keep this stylesheet after the existing S21 layers to honor cascade.
+          main = MAIN.read_text(encoding='utf-8')
+          if "import './chaewon-fine-polish.css';" not in main:
+              imports=list(re.finditer(r'^import\s+[^\n;]+(?:;)?$',main,flags=re.M))
+              style_imports=[m for m in imports if '.css' in m.group(0)]
+              if style_imports:
+                  pos=style_imports[-1].end()
+                  main=main[:pos]+"\nimport './chaewon-fine-polish.css';"+main[pos:]
+              else:
+                  # Must precede non-import statements. ESM imports are allowed at end of import cluster.
+                  pos=imports[-1].end() if imports else 0
+                  main=main[:pos]+"\nimport './chaewon-fine-polish.css';"+main[pos:]
+          
+          # Validate all in memory first; write only after all preflight conditions succeed.
+          assert 'shion-brand-mark' in updated_app and '>C</span>' in updated_app
+          assert 'CHAEWON ARCHIVE' in html
+          assert '%BASE_URL%chaewon-mark.svg' in html
+          for f,contents in [(APP, updated_app),(MAIN,main),(INDEX,html),(icon,icon_text),(css,css_text)]:
+              if not f.is_file() or f.read_text(encoding='utf-8') != contents:
+                  f.parent.mkdir(parents=True,exist_ok=True)
+                  f.write_text(contents,encoding='utf-8')
+                  print('UPDATED:',f.relative_to(ROOT),flush=True)
+              else:
+                  print('UNCHANGED:',f.relative_to(ROOT),flush=True)
+          
+          # Static QA report; no secrets, media rewriting, or timestamps.
+          report = {
+            'site': 'CHAEWON ARCHIVE',
+            'scope': 'UI polishing only: photos, Objekt, FILM, TIMELINE data NOT modified',
+            'monogram_before': logo_was, 'monogram_after': 'C',
+            'favicon': 'public/chaewon-mark.svg', 'metadata': 'S21 corrected',
+            'mobile': ['44px header controls', 'narrow-screen label overflow',
+                       'video modal controls', 'touch hover reduced', 'image box stability'],
+            'build_verification': 'performed by GitHub Actions after this step',
+          }
+          # Do not commit a file containing transient before-state, which breaks idempotence.
+          report.pop('monogram_before')
+          report_file=ROOT/'reports/chaewon-fine-polish.json'
+          report_file.parent.mkdir(parents=True,exist_ok=True)
+          formatted=json.dumps(report,ensure_ascii=False,indent=2)+'\n'
+          if not report_file.is_file() or report_file.read_text('utf-8')!=formatted:
+              report_file.write_text(formatted,encoding='utf-8')
+          print('CHAEWON UI POLISH OK:', logo_was, '→ C; media datasets were preserved',flush=True)
+          PY
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build before committing
+        shell: bash
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci --no-audit --no-fund
+          else
+            npm install --no-audit --no-fund
+          fi
+          npm run build
+          test -s dist/index.html
+      - name: Commit only S21 brand and polish files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- src/App.tsx src/main.tsx src/chaewon-fine-polish.css index.html public/chaewon-mark.svg reports/chaewon-fine-polish.json
+          if git diff --cached --quiet; then
+            echo 'No new changes. This update was already applied.'
+          else
+            git commit -m 'ui: refine CHAEWON logo, metadata and mobile details'
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Report next step
+        shell: bash
+        run: |
+          echo 'C branding polish complete; media content was not changed.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Open Actions → Deploy CHAEWON ARCHIVE → Run workflow to publish.' >> "$GITHUB_STEP_SUMMARY"
