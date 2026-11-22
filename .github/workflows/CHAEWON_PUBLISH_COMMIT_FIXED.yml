@@ -1,0 +1,290 @@
+name: CHAEWON GALLERY - Publish Catalogued Photos
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'preview checks the 350-photo catalog without publishing'
+        required: true
+        type: choice
+        options:
+          - preview
+          - publish
+        default: preview
+      rights_confirmation:
+        description: 'For publish: type I_HAVE_REUSE_RIGHTS after checking rights for all selected images'
+        required: false
+        default: ''
+      selection:
+        description: 'all = entire catalog; or a comma-separated list of catalogue IDs you have cleared'
+        required: true
+        default: 'all'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chaewon-fandom-gallery-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main' && github.repository == 'bbangshion/chaewon-archive'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image processing
+        run: python -m pip install --disable-pip-version-check 'requests>=2.32,<3' 'Pillow>=10,<13'
+      - name: Verify the catalog and optionally register images
+        env:
+          MODE: ${{ inputs.mode }}
+          RIGHTS_CONFIRMATION: ${{ inputs.rights_confirmation }}
+          SELECTION: ${{ inputs.selection }}
+        shell: bash
+        run: |
+          python - <<'PYCODE'
+          import collections
+          import datetime
+          import hashlib
+          import io
+          import json
+          import os
+          import re
+          import time
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          import requests
+          from PIL import Image, ImageOps, UnidentifiedImageError
+
+          REPORT = Path('reports/chaewon-fandom-gallery.json')
+          DATA = Path('public/data/photos.json')
+          IMAGES = Path('public/images/chaewon-fandom')
+          ALBUM = {
+              'Promotional': ('공식 콘셉트·프로모션', 'Promotional', '公式コンセプト'),
+              'Pictorial': ('화보·매거진', 'Pictorial', 'グラビア・雑誌'),
+              'Misc.': ('프로필·기타', 'Profile & Misc.', 'プロフィール・その他'),
+              'Behinds': ('비하인드·현장', 'Behind the scenes', 'ビハインド'),
+              'Stages': ('무대·공연', 'Stages', 'ステージ'),
+              'Review': ('분류 검토 필요', 'Needs review', '分類確認待ち'),
+          }
+          VALID_HOSTS = ('static.wikia.nocookie.net', 'vignette.wikia.nocookie.net')
+          Image.MAX_IMAGE_PIXELS = 32_000_000
+          session = requests.Session()
+          session.headers.update({'User-Agent': 'CHAEWON-ARCHIVE/1.0 (fan gallery)', 'Accept': 'image/*'})
+
+          def read_json(path):
+              if not path.is_file():
+                  raise RuntimeError(f'Missing {path}. Run CHAEWON GALLERY catalog first.')
+              return json.loads(path.read_text(encoding='utf-8'))
+
+          def save_json(path, payload):
+              path.parent.mkdir(parents=True, exist_ok=True)
+              tmp = path.with_suffix(path.suffix + '.tmp')
+              tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              tmp.replace(path)
+
+          def approved_url(url):
+              try:
+                  info = urlparse(url)
+                  return (info.scheme == 'https' and info.hostname in VALID_HOSTS
+                          and not info.username and not info.password)
+              except (ValueError, TypeError):
+                  return False
+
+          def fetch_image(url):
+              if not approved_url(url):
+                  raise RuntimeError('Not a verified Fandom image URL')
+              last = None
+              for attempt in range(3):
+                  try:
+                      r = session.get(url, timeout=40, stream=True, allow_redirects=True)
+                      if not approved_url(r.url):
+                          r.close()
+                          raise RuntimeError('Image redirected outside approved Fandom host')
+                      r.raise_for_status()
+                      if not r.headers.get('Content-Type', 'image/').lower().startswith('image/'):
+                          r.close()
+                          raise RuntimeError('Response is not an image')
+                      buf = io.BytesIO()
+                      for chunk in r.iter_content(chunk_size=65536):
+                          buf.write(chunk)
+                          if buf.tell() > 18_000_000:
+                              r.close()
+                              raise RuntimeError('Image exceeds download limit')
+                      r.close()
+                      return buf.getvalue()
+                  except requests.RequestException as exc:
+                      last = type(exc).__name__
+                      time.sleep(1 + attempt * 2)
+              raise RuntimeError('Could not download image: ' + str(last))
+
+          def as_webp(raw):
+              with Image.open(io.BytesIO(raw)) as source:
+                  source = ImageOps.exif_transpose(source)
+                  if min(source.size) < 100:
+                      raise RuntimeError('Image is too small')
+                  source.thumbnail((1600, 2200), Image.Resampling.LANCZOS)
+                  if source.mode not in ('RGB', 'L'):
+                      if 'A' in source.getbands():
+                          bg = Image.new('RGBA', source.size, '#FFFFFF')
+                          bg.alpha_composite(source.convert('RGBA'))
+                          source = bg.convert('RGB')
+                      else:
+                          source = source.convert('RGB')
+                  buffer = io.BytesIO()
+                  source.save(buffer, 'WEBP', quality=83, method=5)
+                  return buffer.getvalue()
+
+          def make_photo(row, output, digest):
+              cat = row['category']
+              korean, english, japanese = ALBUM[cat]
+              event = (row.get('event') or korean).strip()[:90]
+              caption = (row.get('caption') or '').strip()[:65]
+              name = event + (' · ' + caption if caption else '')
+              year = row.get('year')
+              year = str(year) if str(year) in ('2024', '2025', '2026') else None
+              title = (year + ' · ' if year else '') + name
+              return {
+                  'id': row['id'],
+                  'category': 'photo',
+                  'memberId': 'S21',
+                  'image': 'images/chaewon-fandom/' + output.name,
+                  'title': {'ko': title, 'en': title, 'ja': title},
+                  'album': {'ko': korean, 'en': english, 'ja': japanese},
+                  'date': None,
+                  'year': year,
+                  'captureDateVerified': False,
+                  'credit': {
+                      'ko': '원저작권자 별도 · 자료: tripleS Wiki (Fandom) · 아카이브: 빵시온',
+                      'en': 'Copyright: respective owners · Reference: tripleS Wiki (Fandom) · Archive: bbangshion',
+                      'ja': '著作権: 各権利者 · 参照: tripleS Wiki (Fandom) · アーカイブ: bbangshion',
+                  },
+                  'sourceUrl': row['filePageUrl'],
+                  'gallerySourceUrl': 'https://triples.fandom.com/wiki/Kim_ChaeWon/Gallery',
+                  'sourceType': 'fandom-gallery',
+                  'assetType': 'wiki-reference',
+                  'rightsStatus': 'user-confirmed',
+                  'sourceFileTitle': row['fileTitle'],
+                  'sha256': digest,
+                  'identityVerified': False,
+                  'tags': ['김채원', '채원', 'ChaeWon', 'S21', 'tripleS', cat, event] + ([year] if year else []),
+              }
+
+          def main():
+              catalog = read_json(REPORT)
+              rows = catalog.get('items') if isinstance(catalog, dict) else None
+              if not isinstance(rows, list) or not rows:
+                  raise SystemExit('Fandom catalog has no photos. Run catalog first.')
+              mode = os.getenv('MODE', 'preview')
+              selection = os.getenv('SELECTION', 'all').strip()
+              if mode not in ('preview', 'publish'):
+                  raise SystemExit('Unknown mode')
+              allowed = {str(x.get('id')): x for x in rows if isinstance(x, dict) and x.get('id')}
+              if selection == 'all':
+                  selected = list(allowed.values())
+              else:
+                  ids = [x.strip() for x in selection.split(',') if x.strip()]
+                  missing = set(ids) - set(allowed)
+                  if missing:
+                      raise SystemExit(f'{len(missing)} photo IDs not found in Fandom catalog')
+                  selected = [allowed[i] for i in dict.fromkeys(ids)]
+              if not selected:
+                  raise SystemExit('No selected photos')
+              tally = collections.Counter(x.get('category', 'Review') for x in selected)
+              url_count = sum(bool(x.get('imageUrl')) and approved_url(x.get('imageUrl')) for x in selected)
+              lines = [f'## CHAEWON Fandom Gallery — {mode}',
+                       f'- Total catalog photos: **{len(rows)}**',
+                       f'- Selected: **{len(selected)}**',
+                       f'- Image URLs ready: **{url_count}**',
+                       '- Categories: ' + ', '.join(f'{k} {v}' for k,v in sorted(tally.items()))]
+              if mode == 'publish' and os.getenv('RIGHTS_CONFIRMATION') != 'I_HAVE_REUSE_RIGHTS':
+                  raise SystemExit('STOP: First verify permission to republish EVERY selected image. Set rights_confirmation=I_HAVE_REUSE_RIGHTS only when true.')
+              if mode == 'publish':
+                  photos_json = read_json(DATA)
+                  if isinstance(photos_json, list):
+                      photos, wrapper = photos_json, None
+                  elif isinstance(photos_json, dict) and isinstance(photos_json.get('photos'), list):
+                      photos, wrapper = photos_json['photos'], photos_json
+                  else:
+                      raise RuntimeError('Unexpected photos.json shape; no files overwritten')
+                  existing_ids = {x.get('id') for x in photos if isinstance(x, dict)}
+                  existing_files = {str(x.get('sourceFileTitle', '')).casefold()
+                                    for x in photos if isinstance(x, dict) and x.get('sourceFileTitle')}
+                  existing_hashes = {x.get('sha256') for x in photos if isinstance(x, dict) and x.get('sha256')}
+                  IMAGES.mkdir(parents=True, exist_ok=True)
+                  added, skipped = 0, 0
+                  errors = []
+                  for index, row in enumerate(selected, 1):
+                      media_id, title, cat = row.get('id'), row.get('fileTitle', ''), row.get('category')
+                      if not isinstance(media_id, str) or not media_id.startswith('cw-fandom-') or cat not in ALBUM:
+                          errors.append({'id': media_id, 'reason': 'Invalid item data'})
+                          continue
+                      if media_id in existing_ids or str(title).casefold() in existing_files:
+                          skipped += 1
+                          continue
+                      try:
+                          binary = as_webp(fetch_image(row.get('imageUrl', '')))
+                          digest = hashlib.sha256(binary).hexdigest()
+                          if digest in existing_hashes:
+                              skipped += 1
+                              continue
+                          output = IMAGES / (media_id + '.webp')
+                          output.write_bytes(binary)
+                          photos.append(make_photo(row, output, digest))
+                          row['status'] = 'published'
+                          row['localFile'] = str(output)
+                          existing_ids.add(media_id)
+                          existing_files.add(str(title).casefold())
+                          existing_hashes.add(digest)
+                          added += 1
+                      except (RuntimeError, requests.RequestException, ValueError, OSError, UnidentifiedImageError, Image.DecompressionBombError) as err:
+                          errors.append({'id': media_id, 'reason': type(err).__name__ + ': ' + str(err)[:120]})
+                      if index % 25 == 0:
+                          print(f'Progress: {index}/{len(selected)}, added={added}, skipped={skipped}, errors={len(errors)}', flush=True)
+                          time.sleep(0.2)
+                  if added:
+                      save_json(DATA, photos if wrapper is None else dict(wrapper, photos=photos))
+                  catalog['lastPublish'] = {
+                      'time': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                      'selectedCount': len(selected), 'newlyPublished': added,
+                      'duplicateSkipped': skipped, 'downloadErrors': len(errors), 'errors': errors[:100]
+                  }
+                  save_json(REPORT, catalog)
+                  lines.extend([f'- New images added: **{added}**', f'- Already registered/duplicate: **{skipped}**',
+                                f'- Download/processing errors: **{len(errors)}**',
+                                f'- Total PHOTO entries now: **{len(photos)}**',
+                                '- Git commit happens in the next step; run Deploy CHAEWON ARCHIVE after success.'])
+              else:
+                  lines.extend(['- Preview only. Nothing downloaded or published.',
+                                '- These images have different original rights holders; review permission before publishing.'])
+              out = '\n'.join(lines)
+              print(out)
+              if os.getenv('GITHUB_STEP_SUMMARY'):
+                  with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+                      f.write(out + '\n')
+
+          main()
+          PYCODE
+      - name: Commit new CHAEWON images and photo data
+        if: inputs.mode == 'publish'
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- public/data/photos.json reports/chaewon-fandom-gallery.json
+          if [ -d public/images/chaewon-fandom ]; then
+            git add -- public/images/chaewon-fandom
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'photos: add approved CHAEWON Fandom gallery images'
+            git push
+          else
+            echo 'No new photos to commit.'
+          fi
