@@ -1,0 +1,72 @@
+name: Diagnose CHAEWON Instagram API
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check IG permissions and Business Discovery (read-only)
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, json, re
+          from urllib import parse, request, error
+
+          token = os.environ.get('IG_ACCESS_TOKEN','').strip()
+          user = os.environ.get('IG_USER_ID','').strip()
+          if not token:
+              raise SystemExit('FAIL - IG_ACCESS_TOKEN is missing from this repository Secrets')
+          if not re.fullmatch(r'[0-9]+', user):
+              raise SystemExit('FAIL - IG_USER_ID is missing or not a numeric Instagram professional account ID')
+          print('Secrets present: YES (values hidden)')
+
+          stages = [
+              ('1. Instagram ID accessible', 'v27.0', f'{user}', 'id,username'),
+              ('2. Business Discovery basic', 'v27.0', f'{user}', 'business_discovery.username(triplescosmos){username}'),
+              ('3. Business Discovery media simple', 'v27.0', f'{user}', 'business_discovery.username(triplescosmos){media.limit(2){id,media_type,permalink,timestamp}}'),
+              ('4. Business Discovery full fields', 'v27.0', f'{user}', 'business_discovery.username(triplescosmos){username,media.limit(2){id,caption,media_type,permalink,timestamp,media_url,children{id,media_type,media_url}}}'),
+              ('5. v24 compatibility (simple)', 'v24.0', f'{user}', 'business_discovery.username(triplescosmos){username}'),
+          ]
+          results = []
+          for title, ver, path, fields in stages:
+              url = f'https://graph.facebook.com/{ver}/{path}?' + parse.urlencode({'fields':fields})
+              req = request.Request(url, headers={'Authorization':'Bearer '+token,
+                   'User-Agent':'CHAEWON-ARCHIVE-DIAG/1.0', 'Accept':'application/json'})
+              try:
+                  with request.urlopen(req, timeout=20) as response:
+                      data = json.load(response)
+                  print('PASS:', title)
+                  results.append((title,'PASS',''))
+              except error.HTTPError as exc:
+                  try:
+                      payload=json.loads(exc.read(16384))
+                  except Exception:
+                      payload={}
+                  e=payload.get('error',{})
+                  message=str(e.get('message','unspecified Meta error'))
+                  message=message.replace(token,'[REDACTED]').replace(user,'[IG_USER_ID]')
+                  message=re.sub(r'EA[A-Za-z0-9_-]{15,}', '[REDACTED]', message)
+                  message=message[:500]
+                  info=f'HTTP {exc.code}, code={e.get("code","?")}, subcode={e.get("error_subcode","?")}: {message}'
+                  print('FAIL:', title, '=>', info)
+                  results.append((title,'FAIL',info))
+              except Exception as exc:
+                  print('FAIL:', title, '=>', type(exc).__name__)
+                  results.append((title,'FAIL',type(exc).__name__))
+
+          summary=os.environ.get('GITHUB_STEP_SUMMARY')
+          if summary:
+              with open(summary,'a',encoding='utf-8') as f:
+                  f.write('## CHAEWON Instagram API diagnosis\n\n')
+                  f.write('No images were downloaded or published; secret values are hidden.\n\n')
+                  for title,state,reason in results:
+                      f.write(f'- **{state}** {title}'+(f': {reason}' if reason else '')+'\n')
+                  f.write('\nFix the first failing step before rerunning the photo importer.\n')
+          print('Done. See the Summary tab of this run for all 5 results.')
+          PY
