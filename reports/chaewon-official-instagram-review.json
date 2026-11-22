@@ -1,0 +1,16 @@
+{
+  "account": "@triplescosmos",
+  "note": "Caption matches are candidates, not proof of the person in every picture. Review & rights clearance required.",
+  "mode": "discover",
+  "lastScan": {
+    "scannedPosts": 50,
+    "pages": 1,
+    "morePagesAvailable": false,
+    "incompleteCarousels": 0
+  },
+  "candidateCount": 0,
+  "newPublishedCount": 0,
+  "duplicatesSkipped": 0,
+  "publishErrors": [],
+  "candidates": []
+}
