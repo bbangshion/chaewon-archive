@@ -21,7 +21,8 @@ export default function HomeUpdates() {
     setLoading(true);
     void retryOverview().then((result) => { setData(result); setLoading(false); });
   };
-  const photos = data?.photos.slice(0, 6) ?? [];
+  // Prefer source-labelled 2026 photography; do not invent shoot dates.
+  const photos = data?.photos.filter((photo) => photo.year === '2026').sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.key.localeCompare(b.key)).slice(0, 6) ?? [];
   const films = data?.films.slice(0, 3) ?? [];
   const objektCount = catalogState.status === 'ready' ? formatNumber(catalogState.catalog.items.length) : '—';
   return <section className="shion-overview" aria-labelledby="shion-overview-title">
@@ -46,7 +47,7 @@ export default function HomeUpdates() {
         <div className="shion-overview-photo-grid">{photos.map((photo) => <button type="button" key={photo.key} className="shion-overview-photo"
           onClick={() => setScreen('photos', photo.id)} aria-label={searchLabel(photo.title, language)}>
           {photo.image && <img src={photo.image} alt="" loading="lazy" decoding="async" />}
-          <span>{searchLabel(photo.title, language)}<small>{photo.date || t('날짜 미등록')}</small></span>
+          <span>{searchLabel(photo.title, language)}<small>{photo.date || (photo.year === '2026' ? '2026 · 촬영일 미확인' : t('날짜 미등록'))}</small></span>
         </button>)}</div>
       </div> : null}
       {!loading && films.length > 0 ? <div className="shion-overview-group">

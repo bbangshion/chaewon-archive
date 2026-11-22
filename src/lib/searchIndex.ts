@@ -66,7 +66,7 @@ export function indexPhotos(payload: unknown): SearchEntry[] {
     const tags = Array.isArray(row.tags) ? row.tags.filter((x): x is string => typeof x === 'string').slice(0, 20) : [];
     results.push({
       key: `photos:${id}`, id, category: 'photos', title,
-      description: album, image, date, year: date?.slice(0, 4) || null,
+      description: album, image, date, year: (typeof row.year === 'string' && /^20\d{2}$/.test(row.year) ? row.year : date?.slice(0, 4) || null),
       searchText: normalizeSearchText([id, ...Object.values(title), ...Object.values(album), ...Object.values(credit), ...tags, date, '김채원', 'S21', 'ChaeWon', 'チェウォン', 'キム・チェウォン'].join(' ')),
     });
   }

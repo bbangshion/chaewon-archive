@@ -55,7 +55,7 @@ export default function ChaewonFeaturedPhotos() {
   }).filter((photo): photo is GalleryPhoto => photo !== null)
     .sort((a,b) => Number(Boolean(b.date)) - Number(Boolean(a.date)) || (b.date || '').localeCompare(a.date || '')),
   [all, language]);
-  const featured = items.slice(0, 6);
+  const featured = items.filter((photo) => photo.year === '2026' || photo.date?.startsWith('2026-')).slice(0, 6);
   if (failed || !items.length) return null;
   const L = language === 'en' ? {
     eyebrow: 'THE COLLECTION / S21', title: 'Photo collection', tagline: 'A visual archive of Kim ChaeWon.', view: 'Explore all photographs', count: 'PHOTOGRAPHS', unknown: 'Date unverified',
