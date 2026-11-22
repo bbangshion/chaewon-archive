@@ -3,16 +3,11 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'catalog = classify all images; publish = add photos to CHAEWON ARCHIVE'
+        description: 'catalog = collect source images & classify; publishing requires separate review'
         type: choice
-        options: ['catalog', 'publish']
+        options: ['catalog']
         default: catalog
         required: true
-      confirm:
-        description: 'For publish only, confirm reuse rights: I_HAVE_REUSE_RIGHTS'
-        type: string
-        default: ''
-        required: false
 permissions:
   contents: write
 concurrency:
@@ -35,7 +30,6 @@ jobs:
       - name: Collect and classify gallery image files
         env:
           MODE: ${{ inputs.mode }}
-          CONFIRM: ${{ inputs.confirm }}
         shell: bash
         run: |
           python - <<'PYCODE'
@@ -72,6 +66,7 @@ jobs:
               'Misc.': ('프로필·기타', 'Profile & Misc.', 'プロフィール・その他'),
               'Behinds': ('비하인드·현장', 'Behind the scenes', 'ビハインド'),
               'Stages': ('무대·공연', 'Stages', 'ステージ'),
+              'Review': ('분류 검토 필요', 'Needs review', '分類確認待ち'),
           }
           ALIASES = {
               'Promotional': 'Promotional', 'Promotions': 'Promotional',
@@ -228,14 +223,37 @@ jobs:
 
 
           def parse_wikitext(wikitext):
-              """Fallback for gallery markup when parsed HTML has lost metadata."""
+              """Parse gallery file entries inside Fandom <tabber> and standard headings.
+
+              On this wiki, Promotional/Pictorial/Misc/Behinds/Stages are TAB labels,
+              not necessarily H2 headings; older parser missed every image.
+              """
               major, year, event = None, None, ''
               items = []
-              gallery_depth = 0
+              in_gallery = False
+              in_tabber = False
+              tabber_open = re.compile(r'<tabber\b', re.I)
+              tabber_tab = re.compile(r'^\s*\|-\|\s*([^=]+?)\s*(?:=\s*)?$', re.I)
+              tabber_named = re.compile(r'^\s*(Promotional|Pictorial|Misc\.?|Behinds|Stages|Videos|Fancams)\s*=\s*$', re.I)
+              file_link = re.compile(r'\[\[\s*(?:File|Image)\s*:\s*([^\]|\n]+?\.(?:jpe?g|png|webp|avif|bmp))', re.I)
+              gallery_line = re.compile(r'^\s*((?:(?:File|Image):)?[^|<>\n]+?\.(?:jpe?g|png|webp|avif|bmp))\s*(?:\|\s*(.*))?$', re.I)
               for line in wikitext.splitlines():
-                  match = HEAD.match(line)
-                  if match:
-                      label = clean(match.group(2))
+                  if tabber_open.search(line):
+                      in_tabber = True
+                  if re.search(r'</tabber\s*>', line, re.I):
+                      in_tabber = False
+                  m = tabber_tab.match(line) if in_tabber else None
+                  if not m and in_tabber:
+                      m = tabber_named.match(line)
+                  if m:
+                      sec = map_section(m.group(1).strip())
+                      # Never accidentally attribute another member / video tab.
+                      major = sec
+                      year, event, in_gallery = None, '', False
+                      continue
+                  m = HEAD.match(line)
+                  if m:
+                      label = clean(m.group(2))
                       sec = map_section(label)
                       if sec is not None:
                           major, year, event = sec, None, ''
@@ -244,34 +262,50 @@ jobs:
                       elif major in ALBUMS:
                           event = label
                       continue
-                  if major not in ALBUMS:
-                      continue
-                  if re.search(r'<gallery\b', line, flags=re.I):
-                      gallery_depth += 1
-                  found_in_line = set()
-                  for m in WIKI_IMAGE.finditer(line):
-                      # Outside <gallery>, only real [[File:...]] markup is eligible.
-                      if not gallery_depth and not re.search(r'\[\[(?:File|Image):', line, re.I):
-                          continue
-                      name = file_name(m.group(1))
-                      if name:
-                          found_in_line.add(name.casefold())
-                          caption = line[m.end():].split('|', 1)[-1] if '|' in line[m.end():] else ''
-                          item = build_item(name, major, year, event, caption, len(items))
-                          if item:
-                              items.append(item)
-                  # Standard MediaWiki gallery entries may omit the File: namespace.
-                  if gallery_depth:
-                      simple = re.match(r'^\s*((?:(?:File|Image):)?[^|<>\n]+\.(?:png|jpe?g|webp|avif|bmp))\s*(?:\|\s*(.*))?$', line, re.I)
-                      if simple:
-                          name = file_name(simple.group(1))
-                          if name and name.casefold() not in found_in_line:
-                              item = build_item(name, major, year, event, simple.group(2) or '', len(items))
+                  if re.search(r'<gallery\b', line, re.I):
+                      in_gallery = True
+                  if major in ALBUMS and major != 'Review':
+                      seen = set()
+                      for m in file_link.finditer(line):
+                          fname = file_name(m.group(1))
+                          if fname:
+                              item = build_item(fname, major, year, event, '', len(items))
                               if item:
                                   items.append(item)
-                  if re.search(r'</gallery\s*>', line, flags=re.I):
-                      gallery_depth = max(gallery_depth - 1, 0)
+                                  seen.add(fname.casefold())
+                      if in_gallery:
+                          m = gallery_line.match(line)
+                          if m:
+                              fname = file_name(m.group(1))
+                              if fname and fname.casefold() not in seen:
+                                  item = build_item(fname, major, year, event, m.group(2) or '', len(items))
+                                  if item:
+                                      items.append(item)
+                  if re.search(r'</gallery\s*>', line, re.I):
+                      in_gallery = False
               return items
+
+
+          def api_gallery_images():
+              """MediaWiki images endpoint, independent of Fandom's tab HTML.
+              Returns file titles included by the named page, not arbitrary wiki files.
+              """
+              result = []
+              continuation = {}
+              for _ in range(40):
+                  params = {'action': 'query', 'titles': 'Kim_ChaeWon/Gallery',
+                            'prop': 'images', 'imlimit': 'max', 'format': 'json', **continuation}
+                  data = http_get(API, params, json_mode=True)
+                  if data.get('error'):
+                      raise RuntimeError('Fandom images API error: ' + str(data['error'].get('code', '?')))
+                  pages = (data.get('query') or {}).get('pages') or {}
+                  for page in pages.values():
+                      for row in page.get('images', []):
+                          result.append(row.get('title') or '')
+                  continuation = data.get('continue') or {}
+                  if not continuation:
+                      break
+              return result
 
 
           def get_page():
@@ -286,7 +320,9 @@ jobs:
                   wikitext = parsed.get('wikitext') or {}
                   h = html.get('*', '') if isinstance(html, dict) else str(html)
                   w = wikitext.get('*', '') if isinstance(wikitext, dict) else str(wikitext)
-                  return h, w
+                  images = parsed.get('images') or []
+                  print(f'Fandom parse API: HTML={len(h)}, wikitext={len(w)}, direct images={len(images)}')
+                  return h, w, images
               except (RuntimeError, KeyError, ValueError, requests.RequestException) as exc:
                   api_error = str(exc)
               for url in (PAGE + '?action=render', PAGE):
@@ -294,7 +330,7 @@ jobs:
                       html = http_get(url).text
                       if 'mw-parser-output' in html:
                           print('Fandom API unavailable; using rendered page fallback.')
-                          return html, ''
+                          return html, '', []
                   except RuntimeError:
                       pass
               raise RuntimeError('Could not retrieve gallery from Fandom. First API error: ' + str(api_error))
@@ -482,7 +518,7 @@ jobs:
                   raise SystemExit('mode must be catalog or publish')
               if mode=='publish' and os.getenv('CONFIRM')!='I_HAVE_REUSE_RIGHTS':
                   raise SystemExit('STOP: publish only images with verified reuse rights; set confirm=I_HAVE_REUSE_RIGHTS')
-              html,wikitext=get_page()
+              html,wikitext,parsed_images=get_page()
               try:
                   html_items=parse_html(html) if html else []
               except RuntimeError:
@@ -490,18 +526,41 @@ jobs:
               wiki_items=parse_wikitext(wikitext) if wikitext else []
               # Prefer full rendered image order when sufficient and use raw wikitext to fill gaps.
               items=combine(html_items+wiki_items)
+              categorized=len(items)
+              # Robust fallback: list files via MediaWiki's article images API.
+              # Uncategorized files are candidates ONLY; never invent an activity.
+              image_titles=list(parsed_images)
+              try:
+                  image_titles.extend(api_gallery_images())
+              except RuntimeError as err:
+                  print('Fallback query images API unavailable:', str(err)[:160])
+              known = {r['fileTitle'].casefold() for r in items}
+              for raw in image_titles:
+                  if isinstance(raw, dict):
+                      raw = raw.get('title') or raw.get('name') or ''
+                  fname = file_name(raw)
+                  if not fname or ('File:' + fname).casefold() in known:
+                      continue
+                  item=build_item(fname, 'Review', None, '분류 검토 필요', '', len(items))
+                  if item:
+                      items.append(item)
+                      known.add(item['fileTitle'].casefold())
+              print(f'Gallery parsing: HTML categories={len(html_items)}, raw/tabber={len(wiki_items)}, '
+                    f'API candidate titles={len(image_titles)}, total={len(items)}')
               if not items:
-                  raise SystemExit('No gallery images detected (page layout or API changed); refusing to alter site')
-              if len(items) < 15:
-                  raise SystemExit(f'Only {len(items)} gallery images detected; possible incomplete source. Aborting safe.')
+                  print('Diagnostics: Fandom page returned no File titles in HTML, wikitext or MediaWiki images API.')
+                  print('Diagnostics: wikitext begins with', repr((wikitext or '')[:260]))
+                  raise SystemExit('Fandom gallery contained no resolvable image file references; no site files changed')
               resolved=resolve_imageinfo(items)
-              if resolved < max(10, int(len(items)*0.60)):
-                  raise SystemExit(f'Only {resolved}/{len(items)} Fandom image URLs resolved; not replacing existing data')
+              if mode=='publish':
+                  raise SystemExit('Safety check: this patch is for catalog only. Verify categories and reuse rights before publishing.')
+              print(f'Imageinfo resolved: {resolved}/{len(items)} (unresolved entries stay review-only)')
               report={'source':PAGE,'retrievedAt':dt.datetime.now(dt.timezone.utc).isoformat(),
                       'note':'Gallery includes many different copyright owners. Confirm reuse rights before publishing.',
                       'excluded':['Videos','Fancams','Objekts','Polaroids','SNS Archive'],
                       'catalogueCount':len(items),'resolvedCount':resolved,
-                      'mode':mode,'items':items}
+                      'mode':mode,'categorizedCount':categorized,
+                      'reviewRequiredCount':len(items)-categorized,'items':items}
               if mode=='publish':
                   count, duplicate, errors, details=publish(items)
                   report.update({'newlyPublished':count, 'duplicatesSkipped':duplicate, 'downloadErrors':errors, 'errors':details[:150]})
@@ -532,4 +591,4 @@ jobs:
       - name: Next steps
         run: |
           echo '## Next: site deployment' >> "$GITHUB_STEP_SUMMARY"
-          echo 'After publish succeeds, run Actions > Deploy CHAEWON ARCHIVE on main.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Review the catalog and copyright status first; this workflow does not publish photos.' >> "$GITHUB_STEP_SUMMARY"
