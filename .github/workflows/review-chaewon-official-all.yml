@@ -1,0 +1,238 @@
+name: CHAEWON PHOTO - Review All Official Candidates
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Discover all official images for review; approve manually reviewed IDs'
+        type: choice
+        options: [discover, approve]
+        default: discover
+        required: true
+      max_pages:
+        description: 'Maximum official media pages to check (50 posts/page if available)'
+        type: choice
+        options: ['1', '2', '5', '10', '20']
+        default: '2'
+        required: true
+      media_ids:
+        description: 'approve only: verified media IDs, comma separated'
+        default: ''
+        required: false
+      confirm:
+        description: 'approve only: VERIFIED_AND_CLEARED (person and reuse rights checked)'
+        default: ''
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: chaewon-official-review-report
+  cancel-in-progress: false
+jobs:
+  review:
+    if: github.ref == 'refs/heads/main' && github.repository == 'bbangshion/chaewon-archive'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect official image candidates (no auto-publishing)
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          MODE: ${{ inputs.mode }}
+          MAX_PAGES: ${{ inputs.max_pages }}
+          MEDIA_IDS: ${{ inputs.media_ids }}
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          python - <<'PYCODE'
+          import datetime
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import sys
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          
+          ACCOUNT = 'triplescosmos'
+          REPORT = Path('reports/chaewon-official-instagram-review.json')
+          MEMBER_RE = re.compile(r'(?:김\s*채원|채원|kim\s*chae\s*won|chaewon|チェウォン|(?<!\w)S21(?!\w))', re.I)
+          
+          
+          def read_report():
+              if not REPORT.exists():
+                  return {'candidates': []}
+              data = json.loads(REPORT.read_text(encoding='utf-8'))
+              if not isinstance(data, dict) or not isinstance(data.get('candidates', []), list):
+                  raise RuntimeError('Unexpected report format; refusing to overwrite')
+              return data
+          
+          
+          def write_report(data):
+              REPORT.parent.mkdir(parents=True, exist_ok=True)
+              REPORT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          
+          
+          def summary(lines):
+              message = '\n'.join(lines)
+              print(message)
+              if os.getenv('GITHUB_STEP_SUMMARY'):
+                  with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+                      out.write(message + '\n')
+          
+          
+          def api(token, userid, cursor=None):
+              media = 'media.limit(50)'
+              if cursor:
+                  if not re.fullmatch(r'[A-Za-z0-9_+=/-]+', cursor):
+                      raise RuntimeError('Unrecognized pagination cursor')
+                  media += f'.after({cursor})'
+              fields = ('business_discovery.username(' + ACCOUNT + '){username,' + media +
+                        '{id,caption,media_type,media_url,permalink,timestamp,children{id,media_type,media_url}}}')
+              url = 'https://graph.facebook.com/v24.0/' + userid + '?' + urllib.parse.urlencode({'fields': fields})
+              req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + token, 'Accept': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as resp:
+                      data = json.loads(resp.read(10000000))
+              except urllib.error.HTTPError as exc:
+                  try:
+                      code = (json.loads(exc.read(5000)).get('error') or {}).get('code', '?')
+                  except Exception:
+                      code = '?'
+                  raise RuntimeError(f'Meta API error HTTP {exc.code}, code={code}; check token, IG ID, and permissions') from None
+              discovered = data.get('business_discovery', {})
+              if discovered.get('username', '').casefold() != ACCOUNT:
+                  raise RuntimeError('The expected official account was not confirmed')
+              return discovered.get('media') or {}
+          
+          
+          def discover(data):
+              token = os.getenv('IG_ACCESS_TOKEN', '')
+              userid = os.getenv('IG_USER_ID', '')
+              if not token or not userid.isdigit():
+                  raise RuntimeError('Both valid IG_ACCESS_TOKEN and IG_USER_ID repository secrets are required')
+              pages = int(os.getenv('MAX_PAGES', '2'))
+              if pages < 1 or pages > 20:
+                  raise RuntimeError('MAX_PAGES must be from 1 to 20')
+              existing = {str(x['mediaId']): x for x in data.get('candidates', []) if isinstance(x, dict) and x.get('mediaId')}
+              added, scanned, seen, cursor, more, page_count = 0, 0, set(), None, False, 0
+              for _ in range(pages):
+                  media = api(token, userid, cursor)
+                  page_count += 1
+                  for post in media.get('data') or []:
+                      scanned += 1
+                      caption = post.get('caption') or ''
+                      date = (post.get('timestamp') or '')[:10]
+                      link = post.get('permalink') or ''
+                      if not date or date < '2024-04-01' or not link.startswith(('https://www.instagram.com/', 'https://instagram.com/')):
+                          continue
+                      mtype = post.get('media_type')
+                      if mtype == 'IMAGE':
+                          pictures = [post]
+                      elif mtype == 'CAROUSEL_ALBUM':
+                          pictures = (post.get('children') or {}).get('data') or []
+                      else:
+                          pictures = []
+                      for position, photo in enumerate(pictures, 1):
+                          if photo.get('media_type') != 'IMAGE' or not photo.get('id'):
+                              continue
+                          mid = str(photo['id'])
+                          old = existing.get(mid, {})
+                          item = {
+                              'mediaId': mid,
+                              'postId': str(post.get('id') or ''),
+                              'date': date,
+                              'position': position,
+                              'author': '@' + ACCOUNT,
+                              'sourceUrl': link,
+                              'caption': caption[:500],
+                              'imageAvailableInLastScan': bool(photo.get('media_url')),
+                              'captionMatchesMember': bool(MEMBER_RE.search(caption)),
+                              # NOT necessarily a Chaewon photo. Require visual review.
+                              'status': old.get('status', 'review_required'),
+                          }
+                          if mid not in existing:
+                              added += 1
+                          existing[mid] = item
+                  pag = media.get('paging') or {}
+                  more = bool(pag.get('next'))
+                  if not more:
+                      break
+                  new_cursor = (pag.get('cursors') or {}).get('after')
+                  if not new_cursor or new_cursor in seen:
+                      break
+                  seen.add(new_cursor)
+                  cursor = new_cursor
+              data.update({
+                  'account': '@' + ACCOUNT,
+                  'note': 'Candidates are official-account images, NOT confirmed photos of S21 ChaeWon. Check each image and reuse rights before approval.',
+                  'mode': 'discover-all-for-review',
+                  'candidateCount': len(existing),
+                  'lastScan': {'scannedPosts': scanned, 'pages': page_count, 'morePagesAvailable': more},
+                  'candidates': sorted(existing.values(), key=lambda p: (p['date'], p['mediaId']), reverse=True),
+              })
+              write_report(data)
+              summary(['## CHAEWON Official Photo — review discovery',
+                       f'- Official posts scanned: **{scanned}** ({page_count} page(s))',
+                       f'- All official **image candidates**: **{len(existing)}** (new: {added})',
+                       f'- Captions referring to Chaewon/S21: **{sum(bool(v.get("captionMatchesMember")) for v in existing.values())}**',
+                       f'- More pages available: **{more}**',
+                       '- **None of these images is automatically attributed to Chaewon or published.**',
+                       '- Review dates, original post URLs, carousel positions, and usage rights in `reports/chaewon-official-instagram-review.json`.',
+                       '- To approve selected IDs, run this workflow with mode=approve and verified media IDs.'])
+          
+          
+          def approve(data):
+              ids = {s.strip() for s in os.getenv('MEDIA_IDS', '').split(',') if s.strip()}
+              if not ids:
+                  raise RuntimeError('Approve mode requires comma-separated, visually verified media IDs')
+              if os.getenv('CONFIRM') != 'VERIFIED_AND_CLEARED':
+                  raise RuntimeError('Approve mode requires rights and identity verification confirmation')
+              candidates = data.get('candidates', [])
+              present = {str(item.get('mediaId')) for item in candidates}
+              missing = ids - present
+              if missing:
+                  raise RuntimeError(f'{len(missing)} media IDs missing from review report; discover first')
+              updated = 0
+              for item in candidates:
+                  if str(item.get('mediaId')) in ids and item.get('status') != 'published':
+                      item['status'] = 'pending'
+                      updated += 1
+              data['candidateCount'] = len(candidates)
+              write_report(data)
+              summary(['## CHAEWON Official Photo — approved candidates',
+                       f'- Approved as reviewed and cleared: **{updated}**',
+                       '- Image files have NOT been downloaded or published yet.',
+                       '- The existing reviewed-photo publisher can now process these `pending` candidates.'])
+          
+          
+          def main():
+              mode = os.getenv('MODE', 'discover')
+              data = read_report()
+              if mode == 'discover':
+                  discover(data)
+              elif mode == 'approve':
+                  approve(data)
+              else:
+                  raise RuntimeError('Invalid mode')
+          
+          
+          if __name__ == '__main__':
+              try:
+                  main()
+              except Exception as exc:
+                  print(f'ERROR: {exc}', file=sys.stderr)
+                  sys.exit(1)
+          PYCODE
+      - name: Commit review report only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- reports/chaewon-official-instagram-review.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: prepare official CHAEWON photo candidate review'
+            git push
+          fi
