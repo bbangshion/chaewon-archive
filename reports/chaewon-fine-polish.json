@@ -1,0 +1,15 @@
+{
+  "site": "CHAEWON ARCHIVE",
+  "scope": "UI polishing only: photos, Objekt, FILM, TIMELINE data NOT modified",
+  "monogram_after": "C",
+  "favicon": "public/chaewon-mark.svg",
+  "metadata": "S21 corrected",
+  "mobile": [
+    "44px header controls",
+    "narrow-screen label overflow",
+    "video modal controls",
+    "touch hover reduced",
+    "image box stability"
+  ],
+  "build_verification": "performed by GitHub Actions after this step"
+}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import './chaewon-unified.css';
+import './chaewon-fine-polish.css';
 
 const root = document.getElementById('root');
 if (!root) throw new Error('Root container was not found');

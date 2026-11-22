@@ -1,0 +1,47 @@
+/* CHAEWON S21 / precise small-screen polish; non-intrusive and reversible. */
+.shion-brand-mark {
+  flex: 0 0 auto;
+  color: #dbc3ed;
+  border-color: rgba(205,171,229,.75);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+  font-variant-numeric: lining-nums;
+}
+.shion-brand { min-height: 44px; touch-action: manipulation; }
+.shion-menu-toggle { min-height: 44px; min-width: 44px; touch-action: manipulation; }
+/* Reserve image boxes before lazy images decode; avoid flicker and CLS. */
+.cw-featured-visual, .cw-film-poster, .shion-gallery-image { overflow: hidden; }
+.cw-featured-visual img, .cw-film-poster img, .shion-gallery-image img {
+  display: block; width: 100%; height: 100%;
+}
+/* Touch targets in video cards and modals. */
+.cw-film-fav { min-width: 44px; min-height: 44px; }
+.cw-film-modal-head button { min-width: 44px; min-height: 44px; }
+.cw-film-modal { overscroll-behavior: contain; }
+.shion-site-header :is(a,button):focus-visible,
+.cw-film-card :is(a,button):focus-visible { outline: 2px solid #c7a3df; outline-offset: 3px; }
+@media (hover: none) {
+  .cw-featured-tile:hover .cw-featured-visual img,
+  .cw-film-open:hover img { transform: none; }
+}
+@media (max-width: 600px) {
+  .shion-header-inner { gap: 8px; }
+  .shion-brand { gap: 9px; flex: 1 1 auto; overflow: hidden; }
+  .shion-brand-name {
+    min-width: 0; overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap; font-size: clamp(10px, 2.8vw, 12px); letter-spacing: .095em;
+  }
+  .shion-brand-mark { width: 34px; height: 34px; font-size: 23px; }
+  .shion-header-right { gap: 7px; flex: 0 0 auto; }
+  .shion-header-tag { display: none; }
+  .cw-film-grid, .shion-photo-grid { min-width: 0; }
+  .cw-film-modal { max-height: calc(100dvh - 16px); }
+}
+@media (max-width: 360px) {
+  .shion-header-inner { width: calc(100% - 20px); }
+  .shion-brand-name { font-size: 10px; letter-spacing: .06em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cw-film-poster img, .cw-featured-visual img { transition: none !important; transform: none !important; }
+}

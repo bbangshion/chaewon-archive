@@ -63,7 +63,7 @@ function SiteHeader() {
       <header className={`shion-site-header ${screen === 'home' ? 'on-home' : 'on-subpage'}`}>
         <div className="shion-header-inner">
           <a className="shion-brand" href={import.meta.env.BASE_URL} onClick={(event) => { event.preventDefault(); navigate('home'); }} aria-label={t("CHAEWON ARCHIVE 홈으로")}>
-            <span className="shion-brand-mark" aria-hidden="true">Y</span>
+            <span className="shion-brand-mark" aria-hidden="true">C</span>
             <span className="shion-brand-name">CHAEWON <span>ARCHIVE</span></span>
           </a>
 
