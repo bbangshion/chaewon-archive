@@ -864,3 +864,16 @@ body, .shion-home, .shion-hero, .shion-subpage, .shion-footer, .archive-tab-bar 
 .shion-film-dialog { width:100%; max-height:96dvh; overflow-y:auto; } }
 
 .chaewon-gallery-link-wrap{display:flex;justify-content:flex-end;margin:0 0 18px}.chaewon-gallery-link{display:inline-flex;align-items:center;min-height:42px;padding:10px 15px;border:1px solid #c7a3df66;background:#26192f;color:#eacff6;font-size:12px;letter-spacing:.03em;text-decoration:none}.chaewon-gallery-link:hover{border-color:#c7a3df;background:#31213e}
+
+
+/* OBJEKT FAMILY REPAIR 2026-11 */
+/* Objekt cards must never remain hidden by stale scroll-reveal classes. */
+.shion-subpage .grid > article.group.shion-reveal-pending,
+.shion-subpage .grid > article.group.shion-reveal-enter {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+/* Shared visual system must not cover Objekt interactions. */
+.shion-subpage .shion-podium-stage,
+.shion-subpage .shion-top-four { visibility: visible; }

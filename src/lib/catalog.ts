@@ -34,8 +34,8 @@ function memberValueMatches(value: unknown): boolean {
   if (typeof value === 'number') return value === 21;
   const text = asText(value);
   if (!text) return false;
-  const clean = text.normalize('NFKC').toUpperCase().replace(/[\s.\-]/g, '');
-  return /^(S21|S21_CHAEWON|S21CHAEWON|CHAEWON|KIMCHAEWON|김채원|21)$/.test(clean);
+  const clean = text.normalize('NFKC').toUpperCase().replace(/[\s._\-]/g, '');
+  return /^(?:S21|S21CHAEWON|21|CHAEWON|KIMCHAEWON|김채원)$/.test(clean);
 }
 
 export function isChaewonRecord(item: unknown): boolean {
