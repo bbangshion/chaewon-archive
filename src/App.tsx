@@ -19,6 +19,7 @@ const ProfilePage = lazy(() => import('./components/ProfilePage').then((module) 
 const PhotoArchive = lazy(() => import('./components/PhotoArchive').then((module) => ({ default: module.PhotoArchive })));
 const SearchPage = lazy(() => import('./components/SearchPage'));
 const TimelinePage = lazy(() => import('./components/TimelinePage').then((module) => ({ default: module.TimelinePage })));
+const ChaewonFeaturedPhotos = lazy(() => import('./components/ChaewonFeaturedPhotos'));
 const HomeUpdates = lazy(() => import('./components/HomeUpdates'));
 const PHOTO_URL = `${import.meta.env.BASE_URL}images/chaewon-home.jpg`;
 const MENU: readonly {
@@ -119,6 +120,7 @@ function Home() {
       </section>
 
       <Suspense fallback={<div className="shion-overview-loading shion-content-width" role="status"><Trans value="최신 자료를 불러오는 중"/></div>}><HomeUpdates /></Suspense>
+      <Suspense fallback={null}><ChaewonFeaturedPhotos /></Suspense>
 
       <section className="shion-home-explore" aria-labelledby="shion-explore-title">
         <div className="shion-content-width">

@@ -237,6 +237,10 @@ export function PhotoArchive(_legacyProps?: { objekts?: unknown[]; loading?: boo
       <p className="shion-source-note">{language === 'en' ? 'Curated by @bbangshion' : language === 'ja' ? 'アーカイブ編集 · @bbangshion' : '아카이브 정리 · @bbangshion'}</p>
     </header>
     <RecentPhotoSources />
+    <a className="cw-gallery-inline" href={`${import.meta.env.BASE_URL}gallery/`}>
+      <span><b>THE PHOTO COLLECTION</b><small>CHAEWON · S21</small></span>
+      <span>ALL PHOTOS <span aria-hidden="true">↗</span></span>
+    </a>
     <div className="shion-photo-controls">
       <div className="shion-photo-view-tabs" role="group" aria-label={t('사진 보기 방식')}>
         <button type="button" className={mode === 'date' ? 'is-active' : ''} aria-pressed={mode === 'date'} onClick={() => setMode('date')}>{t('날짜별')}</button>
