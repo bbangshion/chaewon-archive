@@ -1,0 +1,149 @@
+name: CHAEWON PHOTO - Publish Reviewed Bulk
+
+on:
+  workflow_dispatch:
+    inputs:
+      approval:
+        description: 'Only run YES after verifying all review candidates show Chaewon and you have permission to republish their images.'
+        required: true
+        type: choice
+        options:
+          - NO
+          - YES_REVIEWED_AND_CLEARED
+        default: NO
+      max_pages:
+        description: 'How many official Instagram pages to re-scan for fresh image URLs (50 posts/page)'
+        required: true
+        type: choice
+        options:
+          - '2'
+          - '5'
+          - '10'
+          - '20'
+        default: '5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chaewon-official-photo-data
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'bbangshion/chaewon-archive' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Require explicit review and rights confirmation
+        shell: bash
+        env:
+          APPROVAL: ${{ inputs.approval }}
+        run: |
+          if [ "$APPROVAL" != 'YES_REVIEWED_AND_CLEARED' ]; then
+            echo 'STOP: Verify candidate photos and image usage rights before publishing.' >&2
+            exit 1
+          fi
+      - name: Checkout latest repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check 'Pillow>=10.4,<13'
+      - name: Publish reviewed photo candidates only
+        shell: bash
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          MAX_PAGES: ${{ inputs.max_pages }}
+          IG_GRAPH_API_VERSION: v24.0
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import os
+          from pathlib import Path
+
+          source = Path('scripts/sync-chaewon-official.py')
+          if not source.is_file():
+              raise SystemExit('Missing scripts/sync-chaewon-official.py; upload it before running.')
+          spec = importlib.util.spec_from_file_location('chaewon_photo_sync', source)
+          sync = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(sync)
+          if not sync.REVIEW.is_file():
+              raise SystemExit('No review report found. Run CHAEWON PHOTO - Official Instagram in discover mode first.')
+          report = sync.load_json(sync.REVIEW, {})
+          candidates = report.get('candidates') or []
+          if not isinstance(candidates, list):
+              raise SystemExit('Invalid candidate report structure.')
+          # Never include posts not previously present in the review report.
+          allowed = {
+              str(row['mediaId']): row for row in candidates
+              if isinstance(row, dict)
+              and row.get('mediaId')
+              and row.get('author') == '@triplescosmos'
+              and row.get('status') != 'published'
+              and row.get('sourceUrl', '').startswith('https://www.instagram.com/')
+          }
+          if not allowed:
+              raise SystemExit('No pending official photo candidates in report. Check candidateCount or run discover again.')
+          token = os.environ.get('IG_ACCESS_TOKEN', '')
+          user_id = os.environ.get('IG_USER_ID', '')
+          if not token or not user_id:
+              raise SystemExit('Missing IG_ACCESS_TOKEN or IG_USER_ID repository secret.')
+          live, stats = sync.scan(token, user_id, os.environ['IG_GRAPH_API_VERSION'], int(os.environ['MAX_PAGES']))
+          available = [mid for mid in allowed if mid in live and live[mid].get('imageUrl')]
+          unavailable = sorted(set(allowed) - set(available))
+          if not available:
+              raise SystemExit('No previously reviewed candidate images were found in the re-scan. Try 10/20 pages or rerun discover.')
+          original = sync.load_json(sync.PHOTOS, [])
+          added, duplicates, failures = sync.publish(available, live, original)
+          for mid in added:
+              allowed[mid]['status'] = 'published'
+          for row in candidates:
+              if isinstance(row, dict) and str(row.get('mediaId')) in added:
+                  row['status'] = 'published'
+          report['candidates'] = candidates
+          report['lastBulkPublish'] = {
+              'reviewedCandidatesRequested': len(allowed),
+              'reScannedPosts': stats['scannedPosts'],
+              'published': len(added),
+              'duplicatesSkipped': duplicates,
+              'notInCurrentScan': len(unavailable),
+              'failed': len(failures),
+          }
+          sync.save_json(sync.REVIEW, report)
+          summary = (f'### CHAEWON PHOTO bulk publication\n\n'
+                     f'- Previously reviewed candidates requested: **{len(allowed)}**\n'
+                     f'- Official posts re-scanned: **{stats["scannedPosts"]}**\n'
+                     f'- New photos added: **{len(added)}**\n'
+                     f'- Duplicate photos skipped: **{duplicates}**\n'
+                     f'- Missing from current scan: **{len(unavailable)}**\n'
+                     f'- Download/convert errors: **{len(failures)}**\n'
+                     f'- Last report: `reports/chaewon-official-instagram-review.json`\n')
+          print(summary)
+          if os.environ.get('GITHUB_STEP_SUMMARY'):
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as output:
+                  output.write(summary)
+          if not added and not duplicates:
+              raise SystemExit('No photos imported. Check the summary and media availability.')
+          PY
+      - name: Commit photo data and local image files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- reports/chaewon-official-instagram-review.json public/data/photos.json
+          if [ -d public/images/chaewon-official ]; then
+            git add -- public/images/chaewon-official
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'photos: publish reviewed CHAEWON official image candidates'
+            git push
+          else
+            echo 'No new photo files to commit.'
+          fi
+      - name: Next step
+        run: |
+          echo 'Now run Actions > Deploy CHAEWON ARCHIVE, then verify the PHOTO and GALLERY sections.' >> "$GITHUB_STEP_SUMMARY"
