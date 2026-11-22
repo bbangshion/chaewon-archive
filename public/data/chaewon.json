@@ -1,0 +1,549 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastReviewed": "2026-11-22",
+  "site": {
+    "id": "chaewon-archive",
+    "title": "CHAEWON ARCHIVE",
+    "subtitle": {
+      "ko": "tripleS S21 김채원의 비공식 팬 아카이브",
+      "en": "An unofficial visual archive of tripleS S21 ChaeWon",
+      "ja": "tripleS S21 チェウォンの非公式ファンアーカイブ"
+    },
+    "author": "@bbangshion",
+    "disclaimer": "Unofficial fan project. Not affiliated with MODHAUS or tripleS.",
+    "locale": [
+      "ko",
+      "en",
+      "ja"
+    ]
+  },
+  "theme": {
+    "background": "#100D15",
+    "surface": "#18131F",
+    "card": "#251B2D",
+    "border": "#423349",
+    "accent": "#C7A3DF",
+    "accentSoft": "#D7B9E9",
+    "text": "#F7F2FA",
+    "muted": "#B3A6B9",
+    "colorNote": "Light Wisteria / fan reference #C7A3DF; official page does not publish a HEX value."
+  },
+  "hero": {
+    "image": "images/chaewon-home.jpg",
+    "width": 1152,
+    "height": 1536,
+    "alt": {
+      "ko": "김채원 아카이브 커버 사진",
+      "en": "Kim ChaeWon archive cover",
+      "ja": "キム・チェウォンのアーカイブ写真"
+    },
+    "preserveOriginal": true,
+    "desktopFocalPoint": "52% 33%",
+    "mobileFocalPoint": "50% 30%",
+    "defaultCopyId": "quiet",
+    "copies": [
+      {
+        "id": "quiet",
+        "english": "Every era, a little more ChaeWon",
+        "korean": "채원의 모든 순간을, 한곳에"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "screen": "home",
+      "label": {
+        "ko": "홈",
+        "en": "Home",
+        "ja": "ホーム"
+      }
+    },
+    {
+      "screen": "profile",
+      "label": {
+        "ko": "프로필",
+        "en": "Profile",
+        "ja": "プロフィール"
+      }
+    },
+    {
+      "screen": "photos",
+      "label": {
+        "ko": "사진",
+        "en": "Photo",
+        "ja": "写真"
+      }
+    },
+    {
+      "screen": "film",
+      "label": {
+        "ko": "영상",
+        "en": "Film",
+        "ja": "映像"
+      }
+    },
+    {
+      "screen": "timeline",
+      "label": {
+        "ko": "타임라인",
+        "en": "Timeline",
+        "ja": "年表"
+      }
+    },
+    {
+      "screen": "collection",
+      "label": {
+        "ko": "오브젝트",
+        "en": "Objekt",
+        "ja": "オブジェクト"
+      }
+    },
+    {
+      "screen": "worldcup",
+      "label": {
+        "ko": "월드컵",
+        "en": "World Cup",
+        "ja": "トーナメント"
+      }
+    },
+    {
+      "screen": "search",
+      "label": {
+        "ko": "통합 검색",
+        "en": "Search",
+        "ja": "検索"
+      }
+    }
+  ],
+  "member": {
+    "id": "S21",
+    "name": {
+      "ko": "김채원",
+      "en": "Kim ChaeWon",
+      "ja": "キム・チェウォン"
+    },
+    "stageName": "ChaeWon",
+    "group": "tripleS",
+    "agency": "MODHAUS",
+    "dateOfBirth": "2007-05-02",
+    "revealedAt": "2024-04-01",
+    "musicDebutAt": "2024-05-08",
+    "bloodType": "AB",
+    "mbti": {
+      "value": "INTP",
+      "reference": "official_profile",
+      "note": "일본 공식 프로필 표기 기준"
+    },
+    "hometown": "인천광역시",
+    "hometownSourceIds": [
+      "hatchi"
+    ],
+    "colorName": "Light Wisteria",
+    "colorHex": "#C7A3DF",
+    "role": "보컬 · 퍼포먼스",
+    "roleNote": "고정된 공식 메인/리드 포지션을 임의로 부여하지 않음",
+    "intro": {
+      "ko": "2024년 4월 1일 S21로 공개됐다. 완전체 활동에 합류한 뒤 Glow, ∞! (Hatchi!), msnz sun으로 활동했다. 음반과 무대, SNS 사진을 시간순으로 기록한다",
+      "en": "Revealed as S21 on April 1, 2024. ChaeWon joined full-group releases and performed with Glow, ∞! (Hatchi!) and msnz sun",
+      "ja": "2024年4月1日にS21として公開。完全体活動に加え、Glow、∞!、msnz sunで活動した"
+    },
+    "units": [
+      {
+        "id": "glow",
+        "name": "Glow",
+        "period": "2024",
+        "status": "debut_unit",
+        "debutDate": "2024-06-21",
+        "song": "내적 댄스 (Inner Dance)",
+        "album": "Inner Dance",
+        "members": [
+          "S21",
+          "S22",
+          "S23",
+          "S24"
+        ],
+        "description": {
+          "ko": "김채원, 설린, 서아, 지연으로 구성된 네 명의 유닛. 〈내적 댄스〉를 발표했다",
+          "en": "A four-member unit with ChaeWon, Sullin, SeoAh and JiYeon, debuting with Inner Dance",
+          "ja": "チェウォン、ソルリン、ソア、ジヨンによる4人組ユニット。「Inner Dance」を発表"
+        },
+        "sourceIds": [
+          "official_glow",
+          "official_performance"
+        ]
+      },
+      {
+        "id": "hatchi",
+        "name": "∞! (Hatchi!)",
+        "period": "2024",
+        "status": "unit",
+        "debutDate": "2024-11-20",
+        "song": "Untitled",
+        "album": "Untitled",
+        "members": [
+          "S03",
+          "S04",
+          "S05",
+          "S06",
+          "S11",
+          "S16",
+          "S20",
+          "S21"
+        ],
+        "description": {
+          "ko": "일본 활동을 위해 구성된 8인 유닛. 2024년 11월 〈Untitled〉로 데뷔했다",
+          "en": "The eight-member Japanese unit debuted with Untitled in November 2024",
+          "ja": "日本活動を行う8人組ユニット。2024年11月に「Untitled」でデビュー"
+        },
+        "sourceIds": [
+          "hatchi"
+        ]
+      },
+      {
+        "id": "sun",
+        "name": "msnz sun",
+        "period": "2025",
+        "status": "unit",
+        "debutDate": "2025-11-24",
+        "song": "Bubble Gum Girl",
+        "album": "Beyond Beauty",
+        "members": [
+          "S05",
+          "S02",
+          "S04",
+          "S15",
+          "S16",
+          "S21"
+        ],
+        "description": {
+          "ko": "msnz 프로젝트의 sun 유닛. 〈Beyond Beauty〉에서 〈Bubble Gum Girl〉을 발표했다",
+          "en": "The sun unit of the msnz project released Bubble Gum Girl on Beyond Beauty",
+          "ja": "msnzプロジェクトのsunユニット。「Beyond Beauty」で「Bubble Gum Girl」を発表"
+        },
+        "sourceIds": [
+          "sun"
+        ]
+      }
+    ],
+    "nicknames": [
+      {
+        "id": "squirtle",
+        "name": "꼬부기",
+        "origin": "데뷔 전 자기소개",
+        "description": {
+          "ko": "서바이벌 프로그램 〈유니버스 티켓〉 지원 자료에 직접 기재한 별명",
+          "en": "A self-listed nickname from her Universe Ticket application",
+          "ja": "「UNIVERSE TICKET」応募プロフィールで本人が記載した愛称"
+        },
+        "sourceIds": [
+          "fanwiki",
+          "namu"
+        ]
+      },
+      {
+        "id": "woni",
+        "name": "워니",
+        "origin": "어린 시절",
+        "description": {
+          "ko": "유치원과 초등학생 시절 사용했다고 전해지는 별명",
+          "en": "A nickname reportedly used during her early school years",
+          "ja": "幼い頃に使われたと伝えられる愛称"
+        },
+        "sourceIds": [
+          "namu"
+        ]
+      },
+      {
+        "id": "waek",
+        "name": "왹왹이",
+        "origin": "팬 커뮤니티",
+        "description": {
+          "ko": "팬들 사이에서 쓰이는 개성 있는 별명. 상세 유래는 추가 검증 중",
+          "en": "A fan-used nickname; its precise origin is pending verification",
+          "ja": "ファンの間で使われる愛称。由来は追加確認中"
+        },
+        "sourceIds": [
+          "namu"
+        ]
+      }
+    ],
+    "interests": [
+      {
+        "id": "hobbies",
+        "title": {
+          "ko": "일상",
+          "en": "Daily life",
+          "ja": "日常"
+        },
+        "description": {
+          "ko": "독서와 티타임을 취미로 언급한 기록",
+          "en": "Reading and enjoying tea have been mentioned as hobbies",
+          "ja": "読書とティータイムを趣味として挙げた記録"
+        },
+        "items": [
+          "독서",
+          "티타임"
+        ],
+        "note": "취향은 언급 시점 이후 달라질 수 있음",
+        "sourceIds": [
+          "fanwiki",
+          "kprofiles"
+        ]
+      },
+      {
+        "id": "experience",
+        "title": {
+          "ko": "데뷔 전 활동",
+          "en": "Pre-debut",
+          "ja": "デビュー前"
+        },
+        "description": {
+          "ko": "〈유니버스 티켓〉에 출연했던 이력",
+          "en": "Appeared on Universe Ticket before joining tripleS",
+          "ja": "tripleS加入前に「UNIVERSE TICKET」に出演"
+        },
+        "items": [
+          "Universe Ticket",
+          "2024 S21 공개"
+        ],
+        "note": "과거 활동 이력",
+        "sourceIds": [
+          "namu",
+          "fanwiki"
+        ]
+      },
+      {
+        "id": "visual",
+        "title": {
+          "ko": "아카이브 포인트",
+          "en": "Visual archive",
+          "ja": "アーカイブ視点"
+        },
+        "description": {
+          "ko": "핑크 헤어와 다양한 무대 스타일을 날짜별 사진으로 살펴볼 수 있도록 구성",
+          "en": "An archive-friendly lens on her changing hair and stage styling",
+          "ja": "ヘアスタイルやステージ衣装を時系列で見られる構成"
+        },
+        "items": [
+          "핑크 헤어",
+          "무대 스타일",
+          "공식 사진"
+        ],
+        "note": "사이트 편집 기준이며 본인 취향이라고 단정하지 않음",
+        "sourceIds": [
+          "official_profile"
+        ]
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "id": "s21-2024-04-01-01",
+      "s21": true,
+      "date": "2024-04-01",
+      "kind": "milestone",
+      "title": {
+        "ko": "S21 김채원 공개",
+        "en": "Revealed as S21",
+        "ja": "S21公開"
+      },
+      "description": {
+        "ko": "tripleS 21번째 멤버로 공개",
+        "en": "Revealed as member S21",
+        "ja": "tripleSのS21として公開"
+      },
+      "scope": "tripleS",
+      "source": "https://www.youtube.com/watch?v=BqtKrYKOPd4",
+      "sourceName": "tripleS official · KimChaeWon.SSS",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2024-05-08-02",
+      "s21": true,
+      "date": "2024-05-08",
+      "kind": "release",
+      "title": {
+        "ko": "ASSEMBLE24 · Girls Never Die",
+        "en": "ASSEMBLE24 · Girls Never Die",
+        "ja": "ASSEMBLE24"
+      },
+      "description": {
+        "ko": "24인 완전체 음반 활동",
+        "en": "Full-group album activities",
+        "ja": "24人の完全体アルバム活動"
+      },
+      "scope": "tripleS",
+      "source": "https://www.youtube.com/watch?v=2tda_TCjz8w",
+      "sourceName": "tripleS official · Girls Never Die",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2024-06-21-03",
+      "s21": true,
+      "date": "2024-06-21",
+      "kind": "unit",
+      "title": {
+        "ko": "Glow · 내적 댄스",
+        "en": "Glow · Inner Dance",
+        "ja": "Glow · Inner Dance"
+      },
+      "description": {
+        "ko": "Glow 음원 활동 시작",
+        "en": "Glow debut single released",
+        "ja": "Glowの初音源リリース"
+      },
+      "scope": "Glow",
+      "source": "https://www.newsis.com/view/NISX20240621_0002781538",
+      "sourceName": "뉴시스 · Glow 2024.06.21",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2024-11-20-04",
+      "s21": true,
+      "date": "2024-11-20",
+      "kind": "unit",
+      "title": {
+        "ko": "∞! (Hatchi!) · Untitled",
+        "en": "∞! (Hatchi!) · Untitled",
+        "ja": "∞! · Untitled"
+      },
+      "description": {
+        "ko": "일본 유닛 활동 시작",
+        "en": "Japanese unit debut",
+        "ja": "日本ユニットでデビュー"
+      },
+      "scope": "∞!",
+      "source": "https://triplesfans.com/members/chaewon?lang=en",
+      "sourceName": "triplesfans · S21 ChaeWon",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2025-05-12-05",
+      "s21": true,
+      "date": "2025-05-12",
+      "kind": "release",
+      "title": {
+        "ko": "ASSEMBLE25 · Are You Alive",
+        "en": "ASSEMBLE25 · Are You Alive",
+        "ja": "ASSEMBLE25"
+      },
+      "description": {
+        "ko": "완전체 음반 활동",
+        "en": "Full-group comeback",
+        "ja": "完全体の活動"
+      },
+      "scope": "tripleS",
+      "source": "https://k-poptoday.com/artist/triples",
+      "sourceName": "tripleS 2026 발매 정보",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2025-11-24-06",
+      "s21": true,
+      "date": "2025-11-24",
+      "kind": "unit",
+      "title": {
+        "ko": "msnz sun · Bubble Gum Girl",
+        "en": "msnz sun · Bubble Gum Girl",
+        "ja": "msnz sun · Bubble Gum Girl"
+      },
+      "description": {
+        "ko": "sun 유닛 활동",
+        "en": "sun unit release",
+        "ja": "sunユニットの活動"
+      },
+      "scope": "sun",
+      "source": "https://www.youtube.com/watch?v=LfS0-022cq8",
+      "sourceName": "tripleS official · Bubble Gum Girl",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2026-06-01-07",
+      "s21": true,
+      "date": "2026-06-01",
+      "kind": "release",
+      "title": {
+        "ko": "ASSEMBLE26 · LOVE&POP pt.1",
+        "en": "ASSEMBLE26 · LOVE&POP pt.1",
+        "ja": "ASSEMBLE26"
+      },
+      "description": {
+        "ko": "완전체 음반 활동",
+        "en": "Full-group release",
+        "ja": "完全体リリース"
+      },
+      "scope": "tripleS",
+      "source": "https://k-poptoday.com/artist/triples",
+      "sourceName": "tripleS 2026 발매 정보",
+      "scheduled": false
+    }
+  ],
+  "features": [],
+  "dataSources": {
+    "photo": "data/photos.json",
+    "film": "data/films.json",
+    "objekt": "data/objekt.json",
+    "activities": "data/chaewon-activities.json"
+  },
+  "sources": {
+    "official_profile": {
+      "name": "tripleS 일본 공식 프로필",
+      "url": "https://www.triples-official.jp/profile/",
+      "level": "official"
+    },
+    "official_reveal": {
+      "name": "tripleS official · KimChaeWon.SSS",
+      "url": "https://www.youtube.com/watch?v=BqtKrYKOPd4",
+      "level": "official"
+    },
+    "official_glow": {
+      "name": "뉴시스 · Glow 2024.06.21",
+      "url": "https://www.newsis.com/view/NISX20240621_0002781538",
+      "level": "press"
+    },
+    "official_performance": {
+      "name": "tripleS official · Inner Dance",
+      "url": "https://www.youtube.com/watch?v=9bfWvaQskLU",
+      "level": "official"
+    },
+    "hatchi": {
+      "name": "triplesfans · S21 ChaeWon",
+      "url": "https://triplesfans.com/members/chaewon?lang=en",
+      "level": "fan_reference"
+    },
+    "sun": {
+      "name": "tripleS official · Bubble Gum Girl",
+      "url": "https://www.youtube.com/watch?v=LfS0-022cq8",
+      "level": "official"
+    },
+    "group24": {
+      "name": "tripleS official · Girls Never Die",
+      "url": "https://www.youtube.com/watch?v=2tda_TCjz8w",
+      "level": "official"
+    },
+    "fanwiki": {
+      "name": "tripleS Wiki · Kim ChaeWon/Facts",
+      "url": "https://triples.fandom.com/wiki/Kim_ChaeWon/Facts",
+      "level": "fan_reference"
+    },
+    "namu": {
+      "name": "나무위키 · 김채원(tripleS)",
+      "url": "https://namu.moe/w/%EA%B9%80%EC%B1%84%EC%9B%90%28tripleS%29",
+      "level": "fan_reference"
+    },
+    "kprofiles": {
+      "name": "Kprofiles · Kim Chaewon",
+      "url": "https://kprofiles.com/kim-chaewon-triples-profile/",
+      "level": "fan_reference"
+    },
+    "assemble26": {
+      "name": "tripleS 2026 발매 정보",
+      "url": "https://k-poptoday.com/artist/triples",
+      "level": "secondary"
+    }
+  },
+  "editorialPolicy": {
+    "publication": "확인된 사실만 기재. 사진 촬영일이 불명확하면 날짜를 임의 생성하지 않음.",
+    "rights": "이미지 사용 권한과 원저작자 출처는 별도 검수. @bbangshion은 사이트 제작 표기이며 사진 저작권 표기가 아님."
+  }
+}

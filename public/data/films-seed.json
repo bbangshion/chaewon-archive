@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-22",
+  "items": [
+    {
+      "youtubeId": "BqtKrYKOPd4",
+      "title": "tripleS 트리플에스 : KimChaeWon.SSS",
+      "category": "other",
+      "publishedAt": "2024-04-01",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "ChaeWon",
+      "scope": "solo",
+      "source": "tripleS official",
+      "verified": true
+    },
+    {
+      "youtubeId": "2tda_TCjz8w",
+      "title": "tripleS 'Girls Never Die' Official MV",
+      "category": "music",
+      "publishedAt": "2024-05-08",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "tripleS",
+      "scope": "group",
+      "source": "tripleS official",
+      "verified": true
+    },
+    {
+      "youtubeId": "9bfWvaQskLU",
+      "title": "tripleS Glow '내적 댄스 (Inner Dance)' Official Performance",
+      "category": "performance",
+      "publishedAt": "2024-06-26",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "Glow",
+      "scope": "unit",
+      "source": "tripleS official",
+      "verified": true
+    },
+    {
+      "youtubeId": "LfS0-022cq8",
+      "title": "tripleS msnz sun 'Bubble Gum Girl' Official MV",
+      "category": "music",
+      "publishedAt": "2025-11-24",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "sun",
+      "scope": "unit",
+      "source": "tripleS official",
+      "verified": true
+    },
+    {
+      "youtubeId": "YsGezcaTqh8",
+      "title": "채원 공주님 생일 축하하거라 | tripleS : SIGNAL LIVE 260502",
+      "category": "signal",
+      "publishedAt": "2026-05-02",
+      "memberIds": [
+        "S21"
+      ],
+      "group": "ChaeWon",
+      "scope": "solo",
+      "source": "tripleS official",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "updatedAt": "2026-11-22",
+  "about": "S21 verified highlights; not exhaustive",
+  "activities": [
+    {
+      "id": "s21-2024-04-01-01",
+      "s21": true,
+      "date": "2024-04-01",
+      "kind": "milestone",
+      "title": {
+        "ko": "S21 김채원 공개",
+        "en": "Revealed as S21",
+        "ja": "S21公開"
+      },
+      "description": {
+        "ko": "tripleS 21번째 멤버로 공개",
+        "en": "Revealed as member S21",
+        "ja": "tripleSのS21として公開"
+      },
+      "scope": "tripleS",
+      "source": "https://www.youtube.com/watch?v=BqtKrYKOPd4",
+      "sourceName": "tripleS official · KimChaeWon.SSS",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2024-05-08-02",
+      "s21": true,
+      "date": "2024-05-08",
+      "kind": "release",
+      "title": {
+        "ko": "ASSEMBLE24 · Girls Never Die",
+        "en": "ASSEMBLE24 · Girls Never Die",
+        "ja": "ASSEMBLE24"
+      },
+      "description": {
+        "ko": "24인 완전체 음반 활동",
+        "en": "Full-group album activities",
+        "ja": "24人の完全体アルバム活動"
+      },
+      "scope": "tripleS",
+      "source": "https://www.youtube.com/watch?v=2tda_TCjz8w",
+      "sourceName": "tripleS official · Girls Never Die",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2024-06-21-03",
+      "s21": true,
+      "date": "2024-06-21",
+      "kind": "unit",
+      "title": {
+        "ko": "Glow · 내적 댄스",
+        "en": "Glow · Inner Dance",
+        "ja": "Glow · Inner Dance"
+      },
+      "description": {
+        "ko": "Glow 음원 활동 시작",
+        "en": "Glow debut single released",
+        "ja": "Glowの初音源リリース"
+      },
+      "scope": "Glow",
+      "source": "https://www.newsis.com/view/NISX20240621_0002781538",
+      "sourceName": "뉴시스 · Glow 2024.06.21",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2024-11-20-04",
+      "s21": true,
+      "date": "2024-11-20",
+      "kind": "unit",
+      "title": {
+        "ko": "∞! (Hatchi!) · Untitled",
+        "en": "∞! (Hatchi!) · Untitled",
+        "ja": "∞! · Untitled"
+      },
+      "description": {
+        "ko": "일본 유닛 활동 시작",
+        "en": "Japanese unit debut",
+        "ja": "日本ユニットでデビュー"
+      },
+      "scope": "∞!",
+      "source": "https://triplesfans.com/members/chaewon?lang=en",
+      "sourceName": "triplesfans · S21 ChaeWon",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2025-05-12-05",
+      "s21": true,
+      "date": "2025-05-12",
+      "kind": "release",
+      "title": {
+        "ko": "ASSEMBLE25 · Are You Alive",
+        "en": "ASSEMBLE25 · Are You Alive",
+        "ja": "ASSEMBLE25"
+      },
+      "description": {
+        "ko": "완전체 음반 활동",
+        "en": "Full-group comeback",
+        "ja": "完全体の活動"
+      },
+      "scope": "tripleS",
+      "source": "https://k-poptoday.com/artist/triples",
+      "sourceName": "tripleS 2026 발매 정보",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2025-11-24-06",
+      "s21": true,
+      "date": "2025-11-24",
+      "kind": "unit",
+      "title": {
+        "ko": "msnz sun · Bubble Gum Girl",
+        "en": "msnz sun · Bubble Gum Girl",
+        "ja": "msnz sun · Bubble Gum Girl"
+      },
+      "description": {
+        "ko": "sun 유닛 활동",
+        "en": "sun unit release",
+        "ja": "sunユニットの活動"
+      },
+      "scope": "sun",
+      "source": "https://www.youtube.com/watch?v=LfS0-022cq8",
+      "sourceName": "tripleS official · Bubble Gum Girl",
+      "scheduled": false
+    },
+    {
+      "id": "s21-2026-06-01-07",
+      "s21": true,
+      "date": "2026-06-01",
+      "kind": "release",
+      "title": {
+        "ko": "ASSEMBLE26 · LOVE&POP pt.1",
+        "en": "ASSEMBLE26 · LOVE&POP pt.1",
+        "ja": "ASSEMBLE26"
+      },
+      "description": {
+        "ko": "완전체 음반 활동",
+        "en": "Full-group release",
+        "ja": "完全体リリース"
+      },
+      "scope": "tripleS",
+      "source": "https://k-poptoday.com/artist/triples",
+      "sourceName": "tripleS 2026 발매 정보",
+      "scheduled": false
+    }
+  ]
+}

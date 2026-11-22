@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "memberId": "S21",
+  "status": "awaiting-source-data",
+  "source": {
+    "page": "https://triples.fandom.com/wiki/Kim_ChaeWon/Gallery/SNS_Archive",
+    "main": "https://triples.fandom.com/wiki/Kim_ChaeWon/Gallery"
+  },
+  "totalPhotos": 0,
+  "photos": []
+}

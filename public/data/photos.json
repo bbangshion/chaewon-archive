@@ -1,0 +1,32 @@
+[
+  {
+    "id": "chaewon-cover-user",
+    "category": "photo",
+    "memberId": "S21",
+    "identityVerified": false,
+    "image": "images/chaewon-home.jpg",
+    "title": {
+      "ko": "김채원 · 아카이브 커버",
+      "en": "ChaeWon · Archive cover",
+      "ja": "チェウォン・アーカイブ表紙"
+    },
+    "album": {
+      "ko": "커버",
+      "en": "Cover",
+      "ja": "カバー"
+    },
+    "date": null,
+    "credit": {
+      "ko": "사진 출처 미확인 · 제작 @bbangshion",
+      "en": "Photo source unverified · site @bbangshion",
+      "ja": "写真出典未確認・制作 @bbangshion"
+    },
+    "sourceUrl": null,
+    "tags": [
+      "S21",
+      "김채원",
+      "ChaeWon"
+    ],
+    "rightsStatus": "check-before-republication"
+  }
+]
