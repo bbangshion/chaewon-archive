@@ -1,0 +1,170 @@
+name: CHAEWON - World Cup PNG and 2026 Photos
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: chaewon-worldcup-recent2026
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'bbangshion/chaewon-archive' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout CHAEWON archive
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply safe fixes to HOME and World Cup, preserving data
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, io, pathlib, zipfile, runpy
+          parts = [
+            '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'
+            'AIgUAAAAAA=='
+          ]
+          raw = base64.b64decode(''.join(parts))
+          with zipfile.ZipFile(io.BytesIO(raw), 'r') as archive:
+              for source, output in (
+                  ('apply_patch.py', 'scripts/apply-chaewon-worldcup-2026.py'),
+                  ('cache_objekt_posters.py', 'scripts/cache-chaewon-objekt-posters.py'),
+              ):
+                  file = pathlib.Path(output)
+                  file.parent.mkdir(parents=True, exist_ok=True)
+                  file.write_bytes(archive.read(source))
+          runpy.run_path('scripts/apply-chaewon-worldcup-2026.py', run_name='__main__')
+          PY
+      - name: Install image processing dependencies
+        shell: bash
+        run: python -m pip install --disable-pip-version-check 'Pillow>=10.4,<13' 'requests>=2.32,<3'
+      - name: Cache same-origin Objekt card art for shareable PNG
+        shell: bash
+        run: python scripts/cache-chaewon-objekt-posters.py
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install site dependencies
+        shell: bash
+        run: npm install --no-audit --no-fund
+      - name: Typecheck and build site
+        shell: bash
+        run: npm run build
+      - name: Commit only modified source and cached poster cards
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- src/lib/searchIndex.ts src/components/HomeUpdates.tsx src/components/TournamentArena.tsx src/lib/worldCupPoster.ts scripts/apply-chaewon-worldcup-2026.py scripts/cache-chaewon-objekt-posters.py public/data/objekt-poster-map.json public/objekt-poster
+          if test -f src/components/ChaewonFeaturedPhotos.tsx; then
+            git add -- src/components/ChaewonFeaturedPhotos.tsx
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix: CHAEWON world cup share PNG and 2026 home photos'
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo 'No source changes to commit.'
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site build
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - name: Publish updated CHAEWON ARCHIVE
+        id: publish
+        uses: actions/deploy-pages@v4
