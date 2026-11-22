@@ -1,1 +1,56 @@
-
+name: Install CHAEWON ARCHIVE
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Unpack CHAEWON site without touching workflows
+        run: |
+          test -f CHAEWON_SITE_PAYLOAD.zip || { echo 'Missing CHAEWON_SITE_PAYLOAD.zip in repository root'; exit 1; }
+          mkdir -p /tmp/chaewon-payload
+          unzip -q CHAEWON_SITE_PAYLOAD.zip -d /tmp/chaewon-payload
+          test -f /tmp/chaewon-payload/package.json || { echo 'Invalid payload ZIP'; exit 1; }
+          rsync -ar --exclude='.github/' /tmp/chaewon-payload/ ./
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify S21 data
+        run: node scripts/audit-chaewon.mjs
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build CHAEWON ARCHIVE
+        run: npm run build
+      - name: Commit source only (never update other workflows)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src public scripts index.html package.json postcss.config.cjs tailwind.config.ts tsconfig.json vite.config.ts README.md
+          git rm -f CHAEWON_SITE_PAYLOAD.zip
+          if ! git diff --staged --quiet; then
+            git commit -m 'feat: initialize CHAEWON ARCHIVE S21'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish site
+        id: deployment
+        uses: actions/deploy-pages@v4
